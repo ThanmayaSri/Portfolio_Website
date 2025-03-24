@@ -6,28 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* About Section Styling */
         .about-container {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
             gap: 2rem;
         }
+
         .about-text {
             flex: 1;
             min-width: 280px;
-            max-height: 370px; 
+            max-height: 370px;
             overflow: auto;
         }
+
         .about-image img {
-            max-width: 250px;
-            border-radius: 10px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #5b6dfa;
         }
+
+        /* Navigation Buttons */
         .nav-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
+            justify-content: center;
         }
+
         .nav-buttons a {
             padding: 10px 20px;
             background-color: #5b6dfa;
@@ -35,125 +50,147 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .nav-buttons a:hover {
             background-color: #384ddf;
+        }
+
+        /* Image Styling for Sections */
+        .section-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        ul.cert-links li a {
+            color: #5b6dfa;
+            text-decoration: underline;
+        }
+
+        ul.cert-links li a:hover {
+            color: #384ddf;
         }
     </style>
 </head>
 <body class="is-preload">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-        <div id="main">
-            <div class="inner">
+<!-- Wrapper -->
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
 
-                <!-- Header -->
-                <header id="header">
-                    <a href="#about" class="logo"><strong>Thanmaya Sri's</strong> Portfolio</a>
-                    <ul class="icons">
-                        <li><a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="https://github.com/ThanmayaSri" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </header>
+            <!-- Header -->
+            <header id="header">
+                <a href="#about" class="logo"><strong>Thanmaya Sri's</strong> Portfolio</a>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/ThanmayaSri" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </header>
 
-                <!-- Navigation Buttons -->
-                <div class="nav-buttons">
-                    <a href="#about me">About Me</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#professional experience">Professional Experience</a> 
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#certifications">Certifications</a>
-                    <a href="#contact">Contact</a>
-                </div>
-
-                <!-- About Me -->
-                <section id="about me">
-                    <header>
-                        <h1>Hi, I’m Thanmaya Sri Sigireddi,<br /> a Data Scientist</h1>
-                        <p>Harnessing data to drive innovation and impact</p>
-                    </header>
-                    <div class="about me-container">
-                        <div class="about me-text">
-                            <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
-                        </div>
-                        <div class="about me-image">
-                            <img src="images/my_image.jpeg" alt="Thanmaya Sri" />
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Experience -->
-                <section id="experience">
-                    <header class="major"><h2>Professional Experience</h2></header>
-                    <p><strong>Data Analyst Intern, Perfect Job Accord</strong> (Dec 2022 – Dec 2023)</p>
-                    <ul>
-                        	<p><strong>December 2022 – December 2023 | Remote</strong></p>
-										<p><p>During this internship, I worked on data-driven job market analysis, utilizing SQL and Python (Pandas, NumPy) to analyze large datasets containing job trends, skills demand, and candidate profiling. I developed interactive Power BI dashboards to provide dynamic insights into hiring patterns and job postings. Additionally, I implemented predictive analytics models to enhance job recommendations based on historical hiring trends and user behavior data.</p>
-										<p>Another key aspect of my role was data cleaning and preprocessing, ensuring high data quality for accurate insights. I collaborated closely with the engineering and business teams to refine algorithms for automated resume screening, improving efficiency in talent acquisition pipelines. This role honed my data visualization, predictive modeling, and business intelligence skills while providing hands-on experience in the recruitment analytics domain.</p></p>
-                    </ul>
-                </section>
-
-                <!-- Projects -->
-                <section id="projects">
-                    <header class="major"><h2>Projects</h2></header>
-                    <ul>
-                        <li><strong>Detox Dial – AI-Powered Digital Wellness App:</strong> Developed a GPT-based wellness tool with behavior analytics and cross-platform UX.</li>
-                        <li><strong>Laptop Database Design:</strong> Built a BCNF-normalized PostgreSQL database with advanced SQL querying and ETL pipelines.</li>
-                        <li><strong>Cryptocurrency Clustering:</strong> Used PCA and clustering techniques with R Shiny dashboards to analyze crypto trends.</li>
-                    </ul>
-                </section>
-
-                <!-- Skills -->
-                <section id="skills">
-                    <header class="major"><h2>Skills</h2></header>
-                    <ul>
-                        <li><strong>Languages:</strong> Python, R, C, HTML, CSS</li>
-                        <li><strong>Big Data & Databases:</strong> Spark, Hive, PostgreSQL, MySQL</li>
-                        <li><strong>Frameworks & Libraries:</strong> TensorFlow, PySpark, Pandas, NumPy</li>
-                        <li><strong>Tools:</strong> Tableau, Power BI, Excel, Git</li>
-                    </ul>
-                </section>
-
-                <!-- Certifications -->
-                <section id="certifications">
-                    <header class="major"><h2>Certifications</h2></header>
-                    <ul>
-                        <li>Data Science Foundations – Great Learning Academy</li>
-                        <li>AI-Integrated Application – AI for Good Hackathon</li>
-                        <li>SQL, Python, Power BI – Excel Solutions</li>
-                        <li>Data Science Internship – Plasmid</li>
-                    </ul>
-                </section>
-
-                <!-- Resume -->
-                <section id="resume">
-                    <header class="major"><h2>Resume</h2></header>
-                    <p><a href="Thanmaya_Resume.pdf" target="_blank">Download my resume (PDF)</a></p>
-                </section>
-
-                <!-- Contact -->
-                <section id="contact">
-                    <header class="major"><h2>Contact</h2></header>
-                    <ul>
-                        <li>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></li>
-                        <li>Phone: +1 (716)-465-9667</li>
-                        <li>LinkedIn: <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi">thanmaya-sri-sigireddi</a></li>
-                    </ul>
-                </section>
-
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <a href="#about">About Me</a>
+                <a href="#resume">Resume</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
             </div>
+
+            <!-- About Me -->
+            <section id="about">
+                <header>
+                    <h1>Hi, I’m Thanmaya Sri Sigireddi,<br /> a Data Scientist</h1>
+                    <p>Harnessing data to drive innovation and impact</p>
+                </header>
+                <div class="about-container">
+                    <div class="about-text">
+                        <p>I’m a Data Science graduate student at SUNY Buffalo who thrives at the crossroads of data, design, and purpose. My work blends technical precision with creative thinking—building AI-powered systems, insightful models, and user-centric digital experiences. From decoding complex patterns to crafting intuitive solutions, I believe data is more than numbers—it’s a language for change, innovation, and human impact.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/my_image.jpeg" alt="Thanmaya Sri" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience">
+                <header class="major"><h2>Professional Experience</h2></header>
+                <p><strong>Data Analyst Intern, Perfect Job Accord</strong> (Dec 2022 – Dec 2023)</p>
+                <p><strong>December 2022 – December 2023 | Remote</strong></p>
+                <p>Worked on data-driven job market analysis using SQL, Python, and Power BI to uncover hiring patterns, skills demand, and enhance job recommendations through predictive analytics.</p>
+                <img src="images/experience.jpg" alt="Experience Image" class="section-image" />
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <header class="major"><h2>Projects</h2></header>
+                <ul>
+                    <li><strong>Detox Dial – AI-Powered Digital Wellness App:</strong> Developed a GPT-based wellness tool with behavior analytics and cross-platform UX.</li>
+                    <img src="images/project1.jpg" alt="Detox Dial Project" class="section-image" />
+
+                    <li><strong>Laptop Database Design:</strong> Built a BCNF-normalized PostgreSQL database with advanced SQL querying and ETL pipelines.</li>
+                    <img src="images/project2.jpg" alt="Database Project" class="section-image" />
+
+                    <li><strong>Cryptocurrency Clustering:</strong> Used PCA and clustering techniques with R Shiny dashboards to analyze crypto trends.</li>
+                    <img src="images/project3.jpg" alt="Crypto Project" class="section-image" />
+                </ul>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills">
+                <header class="major"><h2>Skills</h2></header>
+                <ul>
+                    <li><strong>Languages:</strong> Python, R, C, HTML, CSS</li>
+                    <li><strong>Big Data & Databases:</strong> Spark, Hive, PostgreSQL, MySQL</li>
+                    <li><strong>Frameworks & Libraries:</strong> TensorFlow, PySpark, Pandas, NumPy</li>
+                    <li><strong>Tools:</strong> Tableau, Power BI, Excel, Git</li>
+                </ul>
+            </section>
+
+            <!-- Certifications -->
+            <section id="certifications">
+                <header class="major"><h2>Certifications</h2></header>
+                <ul class="cert-links">
+                    <li><a href="https://example.com/datascience-foundation" target="_blank">Data Science Foundations – Great Learning Academy</a></li>
+                    <li><a href="https://example.com/ai-hackathon" target="_blank">AI-Integrated Application – AI for Good Hackathon</a></li>
+                    <li><a href="https://example.com/sql-python-powerbi" target="_blank">SQL, Python, Power BI – Excel Solutions</a></li>
+                    <li><a href="https://example.com/plasmid-intern" target="_blank">Data Science Internship – Plasmid</a></li>
+                </ul>
+            </section>
+
+            <!-- Resume -->
+            <section id="resume">
+                <header class="major"><h2>Resume</h2></header>
+                <p><a href="Thanmaya_Resume.pdf" target="_blank">Download my resume (PDF)</a></p>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact">
+                <header class="major"><h2>Contact</h2></header>
+                <ul>
+                    <li>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></li>
+                    <li>Phone: +1 (716)-465-9667</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi">thanmaya-sri-sigireddi</a></li>
+                </ul>
+            </section>
+
         </div>
     </div>
+</div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
