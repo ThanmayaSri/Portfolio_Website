@@ -9,17 +9,36 @@
         .about-container {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: flex-start;
             gap: 2rem;
         }
         .about-text {
             flex: 1;
             min-width: 280px;
+            max-height: 370px; /* Adjust based on your image */
+            overflow: auto;
         }
         .about-image img {
             max-width: 250px;
-            height: auto;
             border-radius: 10px;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .nav-buttons a {
+            padding: 10px 20px;
+            background-color: #5b6dfa;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .nav-buttons a:hover {
+            background-color: #384ddf;
         }
     </style>
 </head>
@@ -27,8 +46,6 @@
 
     <!-- Wrapper -->
     <div id="wrapper">
-
-        <!-- Main -->
         <div id="main">
             <div class="inner">
 
@@ -41,6 +58,17 @@
                     </ul>
                 </header>
 
+                <!-- Navigation Buttons -->
+                <div class="nav-buttons">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
                 <!-- About Me -->
                 <section id="about">
                     <header>
@@ -49,7 +77,7 @@
                     </header>
                     <div class="about-container">
                         <div class="about-text">
-                            <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
+                            <p>I’m a Data Science graduate student at SUNY Buffalo who thrives at the crossroads of data, design, and purpose. My work blends technical precision with creative thinking—building AI-powered systems, insightful models, and user-centric digital experiences. From decoding complex patterns to crafting intuitive solutions, I believe data is more than numbers—it’s a language for change, innovation, and human impact.</p>
                         </div>
                         <div class="about-image">
                             <img src="images/my_image.jpeg" alt="Thanmaya Sri" />
@@ -57,13 +85,7 @@
                     </div>
                 </section>
 
-                <!-- Resume -->
-                <section id="resume">
-                    <header class="major"><h2>Resume</h2></header>
-                    <p><a href="Thanmaya_Resume.pdf" target="_blank">Download my resume (PDF)</a></p>
-                </section>
-
-                <!-- Professional Experience -->
+                <!-- Experience -->
                 <section id="experience">
                     <header class="major"><h2>Professional Experience</h2></header>
                     <p><strong>Data Analyst Intern, Perfect Job Accord</strong> (Dec 2022 – Dec 2023)</p>
@@ -106,6 +128,12 @@
                     </ul>
                 </section>
 
+                <!-- Resume -->
+                <section id="resume">
+                    <header class="major"><h2>Resume</h2></header>
+                    <p><a href="Thanmaya_Resume.pdf" target="_blank">Download my resume (PDF)</a></p>
+                </section>
+
                 <!-- Contact -->
                 <section id="contact">
                     <header class="major"><h2>Contact</h2></header>
@@ -118,7 +146,6 @@
 
             </div>
         </div>
-
     </div>
 
     <!-- Scripts -->
