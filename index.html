@@ -1,209 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thanmaya Sri Sigireddi | Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanmaya Sri Sigireddi | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
     body {
-      background: linear-gradient(to bottom, #f0f4f8, #e2e8f0); color: #1f2937; line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
     }
     header {
-      background: #1f2937; color: white; padding: 3rem 1rem; text-align: center;
-      animation: fadeInDown 1s ease-in-out;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    header h1 {
-      font-size: 3rem; margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem; color: #cbd5e1;
-    }
-    .social-icons {
-      display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;
-    }
-    .social-icons a {
-      color: #38bdf8; font-size: 1.8rem; transition: transform 0.3s;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-    nav {
-      display: flex; justify-content: center; gap: 2rem; padding: 1rem; background: #2563eb;
-      position: sticky; top: 0; z-index: 1000;
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      margin: 0;
+      list-style: none;
+      gap: 2rem;
     }
     nav a {
-      color: white; text-decoration: none; font-weight: 600; transition: color 0.3s;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #e0f2fe;
+      color: #007acc;
     }
-    section {
-      max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem;
-      animation: fadeInUp 1s ease-in-out;
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
     }
-    section h2 {
-      font-size: 2rem; margin-bottom: 1rem; color: #0f172a;
-      border-left: 6px solid #2563eb; padding-left: 1rem;
+    .profile-pic {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
     }
-    .project, .experience, .certification {
-      background: white; padding: 1.2rem; margin-bottom: 1.5rem; border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+    .icons a {
+      font-size: 2rem;
+      margin: 0 1rem;
+      color: #333;
+      transition: transform 0.3s ease;
     }
-    .project:hover, .experience:hover, .certification:hover {
-      transform: translateY(-5px);
+    .icons a:hover {
+      transform: scale(1.2);
+      color: #007acc;
     }
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem;
+    .project {
+      margin-bottom: 2rem;
     }
-    .skill, .cert {
-      background: #e0f2fe; padding: 0.8rem; border-radius: 8px; text-align: center;
-      font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    .project img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
-    .btn {
-  display: inline-block;
-  background: #14b8a6; /* teal-500 */
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #0f766e; /* darker teal */
-} padding: 0.7rem 1.2rem;
-      border-radius: 8px; margin-top: 1rem; text-decoration: none; font-weight: 600;
-      transition: background 0.3s;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.2s;
     }
-    .btn:hover {
-      background: #1e40af;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
-    footer {
-      text-align: center; padding: 2rem 1rem; background: #cbd5e1; color: #334155;
+    ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 1rem auto;
+      padding-left: 1.5rem;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    ul li {
+      margin-bottom: 0.5rem;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
+    a {
+      color: #007acc;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Thanmaya Sri Sigireddi</h1>
-    <p>Data Scientist | AI Enthusiast | ML Engineer</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/ThanmayaSri" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-  <h2>About Me</h2>
-  <p style="text-align: justify;">
-    <img src="images/my_image.jpeg" alt="Thanmaya Sri Sigireddi" style="float:right; margin:0 0 1rem 2rem; border-radius:10px; max-width:200px;" />
-    I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.
-  </p>
-</section>
-    <h2>About Me</h2>
-    <p>
-      <img src="images/my_image.jpeg" alt="Thanmaya Sri Sigireddi" style="float:right; margin:0 0 1rem 2rem; border-radius:10px; max-width:200px;" />
-      I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.
-    </p>
+  <section id="about" class="section fade-in">
+    <img src="assets/profile.jpg" alt="Thanmaya Sri Sigireddi" class="profile-pic">
+    <h1>Thanmaya Sri Sigireddi</h1>
+    <p>Master's student in Data Science at SUNY Buffalo. Passionate about building AI solutions and driving insights with data.</p>
+    <div class="icons">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="section fade-in">
     <h2>Professional Experience</h2>
-    <div class="experience">
-      <h3>Data Analyst Intern – Perfect Job Accord (Dec 2022 – Dec 2023)</h3>
-      <ul>
-        <li>Built big data pipelines using Linux and Spark; improved efficiency by 30%.</li>
-        <li>Developed ML models including deep learning, forecasting, and clustering in Python.</li>
-        <li>Created dashboards with Power BI and Tableau to drive data-driven decisions.</li>
-      </ul>
-    </div>
+    <h3>Data Analyst Intern, Perfect Job Accord</h3>
+    <ul>
+      <li>Developed and optimized big data pipelines using Linux and Spark, improving processing efficiency by 30%.</li>
+      <li>Built ML models for predictive analytics using Python, PySpark, and TensorFlow.</li>
+      <li>Created ETL workflows and dashboards (Power BI, Tableau) for strategic insights.</li>
+    </ul>
   </section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
     <div class="project">
-      <h3>Detox Dial – AI Digital Wellness App</h3>
-      <p>AI-driven app integrating GPT chat, AI calls, and user analytics to reduce digital addiction.</p>
+      <img src="assets/project1.png" alt="Detox Dial">
+      <h3>Detox Dial</h3>
+      <p>AI-powered digital wellness app using GPT-based chat and behavioral analytics.</p>
+      <a href="project-files/detox_dial.zip" download>Download Files</a>
     </div>
     <div class="project">
-      <h3>Laptop Database Design</h3>
-      <p>PostgreSQL + SQLAlchemy + Pandas to build an optimized and queryable database of 5K+ laptops.</p>
+      <img src="assets/project2.png" alt="Laptop Database">
+      <h3>Laptop Specifications Database</h3>
+      <p>BCNF-normalized PostgreSQL database with advanced SQL features and ETL pipelines.</p>
+      <a href="project-files/laptop_db.zip" download>Download Files</a>
     </div>
     <div class="project">
+      <img src="assets/project3.png" alt="Crypto Clustering">
       <h3>Cryptocurrency Clustering</h3>
-      <p>Used PCA, K-means, and R Shiny to visualize trends in historical crypto data.</p>
+      <p>Used PCA and K-Means to cluster crypto prices with interactive dashboards in R (Shiny).</p>
+      <a href="project-files/crypto_cluster.zip" download>Download Files</a>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">Python</div>
-      <div class="skill">R</div>
-      <div class="skill">SQL</div>
-      <div class="skill">TensorFlow</div>
-      <div class="skill">PySpark</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">PostgreSQL</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Deep Learning</div>
-    </div>
-  </section>
-
-  <section id="certifications">
+  <section id="certifications" class="section fade-in">
     <h2>Certifications</h2>
-    <div class="skills-grid">
-      <div class="cert">Data Science Foundations - Great Learning</div>
-      <div class="cert">AI for Good Hackathon</div>
-      <div class="cert">SQL - Excel Solutions</div>
-      <div class="cert">Python - Excel Solutions</div>
-      <div class="cert">Microsoft Power BI - Excel Solutions</div>
-    </div>
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a></li>
+      <li><a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI for Good Hackathon</a></li>
+      <li><a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">SQL - Excel Solutions</a></li>
+      <li><a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Plasmid Data Science Internship</a></li>
+      <li><a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">Python - Excel Solutions</a></li>
+      <li><a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a></li>
+    </ul>
   </section>
 
-  <section id="resume">
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Python, R, C, HTML, CSS</p>
+    <p><strong>Data & Tools:</strong> PostgreSQL, MySQL, BigQuery, AWS S3, Snowflake</p>
+    <p><strong>Libraries:</strong> Pandas, Numpy, TensorFlow, PySpark</p>
+    <p><strong>Visualization:</strong> Tableau, Power BI, Excel, UI/UX</p>
+  </section>
+
+  <section id="resume" class="section fade-in">
     <h2>Resume</h2>
-    <p>You can view or download my resume below:</p>
-    <iframe src="assets/resume/Thanmaya_Resume.pdf" width="100%" height="600px"></iframe>
-    <p><a class="btn" href="assets/resume/Thanmaya_Resume.pdf" download>Download Resume</a></p>
+    <a href="assets/Thanmaya_Resume.pdf" target="_blank">View Resume</a>
+    <a href="assets/Thanmaya_Resume.pdf" download>Download Resume</a>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section fade-in">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></p>
     <p>Phone: <a href="tel:+17164659667">+1 (716)-465-9667</a></p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Thanmaya Sri Sigireddi. Crafted with 💡 and HTML/CSS.</p>
-  </footer>
 </body>
 </html>
