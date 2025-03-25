@@ -4,178 +4,250 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanmaya Sri Sigireddi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * {
       margin: 0;
       padding: 0;
+      font-family: 'Poppins', sans-serif;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
+      background: #ffffff;
+      color: #000000;
     }
 
     header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      background: #000000;
       color: white;
-      text-align: center;
-      padding: 3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      color: #ff5e00;
+      font-weight: 800;
     }
 
-    header p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-
-    .contact {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .contact a {
-      color: #fff;
+    nav a {
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 0.5rem;
+      color: white;
+      font-weight: 500;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
+    .social-icons a {
+      color: white;
+      margin-left: 15px;
+      font-size: 1.2rem;
     }
 
     section {
-      margin-bottom: 3rem;
+      padding: 4rem 2rem;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #444;
-    }
-
-    .projects, .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      flex: 1 1 300px;
-    }
-
-    ul {
-      list-style: disc inside;
-    }
-
-    .skills-list span {
-      background-color: #2575fc;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-
-    footer {
+    .hero {
       text-align: center;
-      background: #222;
-      color: #fff;
-      padding: 1rem;
+      background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+      padding-top: 5rem;
     }
 
-    @media (max-width: 600px) {
-      .projects, .skills-list {
-        flex-direction: column;
-      }
+    .hero h2 {
+      font-size: 3rem;
+      color: #000000;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #333333;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .about img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .resume-buttons a {
+      text-decoration: none;
+      margin-right: 20px;
+      background: #ff5e00;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .experience, .projects, .skills, .contact {
+      margin-top: 2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .skills ul {
+      columns: 2;
+      margin-top: 1rem;
+    }
+
+    .certs a {
+      display: block;
+      color: #ff5e00;
+      margin-top: 5px;
+    }
+
+    .contact form {
+      margin-top: 1rem;
+      max-width: 400px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact button {
+      background: #ff5e00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Thanmaya Sri Sigireddi</h1>
-    <p>Data Scientist | Machine Learning Enthusiast | Big Data Analyst</p>
-    <div class="contact">
-      <a href="mailto:sigireddithanmayasri@gmail.com">Email</a> |
-      <a href="tel:+17164659667">+1 (716)-465-9667</a> |
-      <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank">LinkedIn</a>
-    </div>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2>About Me</h2>
-      <p>I am a passionate Data Scientist currently pursuing my Master's at SUNY Buffalo. With a strong foundation in machine learning, big data technologies, and data analysis, I love building AI-powered applications that create real-world impact.</p>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Detox Dial – AI-Powered Digital Wellness App</h3>
-          <p>Multi-modal AI intervention system using GPT chat and phone call simulation. Personalized detox recommendations with behavioral analytics and cross-platform design.</p>
-        </div>
-        <div class="card">
-          <h3>Relational Laptop Database</h3>
-          <p>BCNF-normalized PostgreSQL database with 5,000+ records. Advanced SQL, ETL pipelines using Pandas and SQLAlchemy for analytics.</p>
-        </div>
-        <div class="card">
-          <h3>Cryptocurrency Clustering</h3>
-          <p>Dimensionality reduction with PCA and clustering using K-Means & Hierarchical methods. Built a dashboard in R (Shiny) for crypto insights.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Data Analyst Intern – Perfect Job Accord</h3>
-        <ul>
-          <li>Optimized big data pipelines with Linux & Spark (+30% efficiency).</li>
-          <li>Built ML models with Python, TensorFlow, PySpark.</li>
-          <li>Developed ETL workflows and dashboards using Tableau and Power BI.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <span>Python</span>
-        <span>R</span>
-        <span>SQL</span>
-        <span>TensorFlow</span>
-        <span>PySpark</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>PostgreSQL</span>
-        <span>Machine Learning</span>
-        <span>Big Data</span>
-        <span>Data Visualization</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p><strong>State University of New York at Buffalo</strong> — M.S. in Data Science (2024–2025)</p>
-      <p><strong>VNR VJIET</strong> — B.Tech in Electrical & Electronics Engineering (2019–2023)</p>
-    </section>
+<header>
+  <h1>Thanmaya</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
   </div>
+</header>
 
-  <footer>
-    <p>&copy; 2024 Thanmaya Sri Sigireddi</p>
-  </footer>
+<section class="hero">
+  <h2>Thanmaya Sri Sigireddi</h2>
+  <p>Harnessing data to drive innovation and impact | Data Scientist | ML Enthusiast | Big Data & AI Developer</p>
+</section>
+
+<section id="about" class="about">
+  <img src="https://via.placeholder.com/250" alt="Thanmaya Photo" />
+  <div>
+    <h2>About Me</h2>
+    <p>I am a graduate student in Data Science at SUNY Buffalo with a strong foundation in ML, big data, and AI. Passionate about turning data into actionable insights and building intelligent systems to solve real-world problems.</p>
+  </div>
+</section>
+
+<section id="resume" class="resume">
+  <h2>Resume</h2>
+  <div class="resume-buttons">
+    <a href="./Thanmaya_Resume.pdf" target="_blank">View Resume</a>
+    <a href="./Thanmaya_Resume.pdf" download>Download Resume</a>
+  </div>
+</section>
+
+<section id="experience" class="experience">
+  <h2>Professional Experience</h2>
+  <p><strong>Data Analyst Intern, Perfect Job Accord (Dec 2022 – Dec 2023)</strong></p>
+  <ul>
+    <li>Developed and optimized big data pipelines using Linux and Spark, improving data processing efficiency by 30%.</li>
+    <li>Built and deployed ML models including deep learning, time-series forecasting, and unsupervised learning.</li>
+    <li>Designed ETL workflows, dashboards (Power BI, Tableau), and performed statistical analysis for business insights.</li>
+  </ul>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200?text=Detox+Dial" alt="Detox Dial" />
+      <h3>Detox Dial – AI Wellness App</h3>
+      <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200?text=Laptop+DB" alt="Laptop DB" />
+      <h3>Laptop Database</h3>
+      <p>Designed a PostgreSQL DB of 5000+ records with advanced SQL techniques for efficient querying and analytics.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200?text=Crypto+Clustering" alt="Crypto Clustering" />
+      <h3>Crypto Price Clustering</h3>
+      <p>Used PCA and clustering algorithms to analyze crypto price trends with interactive dashboards in R (Shiny).</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills & Certifications</h2>
+  <ul>
+    <li>Python, R, C, HTML, CSS</li>
+    <li>Hive, Spark, PostgreSQL, MySQL</li>
+    <li>TensorFlow, PySpark, Pandas, NumPy</li>
+    <li>Tableau, Power BI, Excel</li>
+  </ul>
+  <div class="certs">
+    <h3>Certifications:</h3>
+    <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a>
+    <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI-integrated App - AI for Good Hackathon</a>
+    <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">SQL - Excel Solutions</a>
+    <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI</a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></p>
+  <p>Phone: <a href="tel:+17164659667">+1 (716) 465-9667</a></p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
 </body>
 </html>
