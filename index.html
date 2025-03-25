@@ -1,185 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanmaya Sri Sigireddi | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      margin: 0;
-      list-style: none;
-      gap: 2rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #007acc;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .icons a {
-      font-size: 2rem;
-      margin: 0 1rem;
-      color: #333;
-      transition: transform 0.3s ease;
-    }
-    .icons a:hover {
-      transform: scale(1.2);
-      color: #007acc;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    ul {
-      text-align: left;
-      max-width: 700px;
-      margin: 1rem auto;
-      padding-left: 1.5rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    a {
-      color: #007acc;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Section</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  .about-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section img {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px;
+    border-radius: 50%; /* Makes the image round */
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    color: #333;
+  }
+
+  /* Additional CSS for Projects Section */
+.projects-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+}
+.card-img-top {
+  max-height: 180px; /* Adjust this value to fit the image properly in the card */
+  object-fit: cover; /* This makes sure the image covers the area properly */
+}
+.card-body {
+  padding: 15px;
+}
+.card-title {
+  font-size: 1.25rem;
+}
+.card-text {
+  margin-bottom: 15px;
+}
+
+/* Additional CSS for Skills Section */
+.skills-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.skills-section .card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.skills-section .card-img-top {
+  padding: 20px; /* Add padding around your images if needed */
+  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
+  height: 180px; /* Fixed height for consistency */
+  object-fit: contain; /* This will make sure the image is scaled properly within the container */
+}
+.skills-section .card-body {
+  padding: 15px;
+}
+.skills-section .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+.skills-section .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+.skills-section .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Additional CSS for Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-icon {
+  width: 50px; /* Size of your icons */
+  margin-bottom: 10px;
+}
+/* Hover effect for icons */
+.social-icon:hover {
+  opacity: 0.7;
+}
+/* Style for links in the Contact section */
+.contact-section a {
+  color: #fff;
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows for margin on the bottom */
+  margin-bottom: 10px;
+}
+.contact-section a:hover {
+  color: #ddd; /* Color when hovering over the link */
+}
+
+/* CSS for Sticky Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+}
+
+/* Ensure padding is added to body to avoid content being hidden behind the navbar */
+body { 
+  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for navigation bar links */
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+}
+
+/* Media query for responsive navbar collapsing */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Same as navbar color for seamless look */
+  }
+}
+
+
+</style>
+
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+<section id='about' class="about-section">
+  <div class="container">
+    <h2>About</h2>
+    <img src="images/about/1.jpg" alt="About Me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dolor dolor. Suspendisse ligula elit, hendrerit ut bibendum quis, facilisis vitae est. Vivamus vitae felis sit amet sem rhoncus euismod. Praesent commodo lorem porttitor. Nam in condimentum ex. Nam accumsan nisi turpis, sed tempus dolor volutpat non. Proin id enim feugiat ipsum consectetur mattis. Nam blandit venenatis nisi, convallis imperdiet nisi condimentum at.</p>
+    <p>Duis convallis ligula sed pretium tristique. Duis nunc risus, lacinia eget cursus id, suscipit ac metus. Sed varius sed tortor congue aliquam. In in dapibus diam, in auctor purus. Praesent vitae tristique diam. Donec tincidunt hendrerit tortor, vitae lobortis purus rutrum sit amet. Nunc non arcu vitae leo rhoncus tincidunt vel sed urna. Sed sed efficitur dui. Morbi id velit nisi. Fusce luctus placerat purus eu cursus.</p>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light" id="projects">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white" id="skills">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <!-- Skill 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/1.png" class="card-img-top" alt="Python">
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQL</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 4 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
+          <div class="card-body">
+            <h5 class="card-title">Data Storytelling</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section text-center text-white bg-dark">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <p><i class="fas fa-envelope"></i> loremipsum@gmail.com</p>
+      </div>
+      <div class="col-lg-6">
+        <p><i class="fas fa-phone"></i> 415xxxxxxx</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://twitter.com/yourusername" target="_blank">
+          <img src="icons/twitter.png" alt="Twitter" class="social-icon">
+          Twitter
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://github.com/yourusername" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://medium.com/@yourusername" target="_blank">
+          <img src="icons/medium.png" alt="Medium" class="social-icon">
+          Medium
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://youtube.com/c/yourchannel" target="_blank">
+          <img src="icons/youtube.png" alt="YouTube" class="social-icon">
+          YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
       </ul>
-    </nav>
-  </header>
-
-  <section id="about" class="section fade-in">
-    <img src="assets/profile.jpg" alt="Thanmaya Sri Sigireddi" class="profile-pic">
-    <h1>Thanmaya Sri Sigireddi</h1>
-    <p>Master's student in Data Science at SUNY Buffalo. Passionate about building AI solutions and driving insights with data.</p>
-    <div class="icons">
-      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section id="experience" class="section fade-in">
-    <h2>Professional Experience</h2>
-    <h3>Data Analyst Intern, Perfect Job Accord</h3>
-    <ul>
-      <li>Developed and optimized big data pipelines using Linux and Spark, improving processing efficiency by 30%.</li>
-      <li>Built ML models for predictive analytics using Python, PySpark, and TensorFlow.</li>
-      <li>Created ETL workflows and dashboards (Power BI, Tableau) for strategic insights.</li>
-    </ul>
-  </section>
 
-  <section id="projects" class="section fade-in">
-    <h2>Projects</h2>
-    <div class="project">
-      <img src="assets/project1.png" alt="Detox Dial">
-      <h3>Detox Dial</h3>
-      <p>AI-powered digital wellness app using GPT-based chat and behavioral analytics.</p>
-      <a href="project-files/detox_dial.zip" download>Download Files</a>
-    </div>
-    <div class="project">
-      <img src="assets/project2.png" alt="Laptop Database">
-      <h3>Laptop Specifications Database</h3>
-      <p>BCNF-normalized PostgreSQL database with advanced SQL features and ETL pipelines.</p>
-      <a href="project-files/laptop_db.zip" download>Download Files</a>
-    </div>
-    <div class="project">
-      <img src="assets/project3.png" alt="Crypto Clustering">
-      <h3>Cryptocurrency Clustering</h3>
-      <p>Used PCA and K-Means to cluster crypto prices with interactive dashboards in R (Shiny).</p>
-      <a href="project-files/crypto_cluster.zip" download>Download Files</a>
-    </div>
-  </section>
-
-  <section id="certifications" class="section fade-in">
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a></li>
-      <li><a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI for Good Hackathon</a></li>
-      <li><a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">SQL - Excel Solutions</a></li>
-      <li><a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Plasmid Data Science Internship</a></li>
-      <li><a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">Python - Excel Solutions</a></li>
-      <li><a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a></li>
-    </ul>
-  </section>
-
-  <section id="skills" class="section fade-in">
-    <h2>Skills</h2>
-    <p><strong>Languages:</strong> Python, R, C, HTML, CSS</p>
-    <p><strong>Data & Tools:</strong> PostgreSQL, MySQL, BigQuery, AWS S3, Snowflake</p>
-    <p><strong>Libraries:</strong> Pandas, Numpy, TensorFlow, PySpark</p>
-    <p><strong>Visualization:</strong> Tableau, Power BI, Excel, UI/UX</p>
-  </section>
-
-  <section id="resume" class="section fade-in">
-    <h2>Resume</h2>
-    <a href="assets/Thanmaya_Resume.pdf" target="_blank">View Resume</a>
-    <a href="assets/Thanmaya_Resume.pdf" download>Download Resume</a>
-  </section>
-
-  <section id="contact" class="section fade-in">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></p>
-    <p>Phone: <a href="tel:+17164659667">+1 (716)-465-9667</a></p>
-  </section>
-
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
