@@ -1,122 +1,120 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Thanmaya Sri's Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .header-with-image {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .header-text {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .header-image img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #5b6dfa;
-        }
-
-        .about-text {
-            max-width: 100%;
-            margin-top: 1rem;
-        }
-
-        /* Navigation Buttons */
-        .nav-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-
-        .nav-buttons a {
-            padding: 10px 20px;
-            background-color: #ccc;
-            color: #222;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-buttons a:hover {
-            background-color: #999;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanmaya Sri Sigireddi | Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f9fafb; color: #111827;
+    }
+    header {
+      background: #1f2937; color: white; padding: 2rem 1rem; text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem; margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0;
+    }
+    nav a {
+      text-decoration: none; color: #1f2937; font-weight: 600;
+    }
+    section {
+      max-width: 960px; margin: 2rem auto; padding: 0 1rem;
+    }
+    section h2 {
+      font-size: 2rem; margin-bottom: 1rem; color: #1f2937;
+    }
+    .project {
+      background: white; padding: 1rem; margin-bottom: 1.5rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .project h3 {
+      color: #2563eb;
+    }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;
+    }
+    .skill {
+      background: #e0f2fe; padding: 0.5rem; border-radius: 8px; text-align: center;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center; padding: 2rem 1rem; background: #f3f4f6; color: #6b7280;
+    }
+    .btn {
+      display: inline-block; background: #2563eb; color: white; padding: 0.5rem 1rem; border-radius: 8px; margin-top: 0.5rem;
+      text-decoration: none; font-weight: 600;
+    }
+  </style>
 </head>
-<body class="is-preload">
+<body>
+  <header>
+    <h1>Thanmaya Sri Sigireddi</h1>
+    <p>Data Scientist | AI Enthusiast | ML Engineer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- Wrapper -->
-<div id="wrapper">
-    <div id="main">
-        <div class="inner">
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Master's student in Data Science at SUNY Buffalo with a strong foundation in Machine Learning, Big Data, and Deep Learning. I enjoy solving real-world problems through AI-driven solutions and data-driven insights. From predictive analytics to digital wellness apps, my projects reflect a commitment to innovation and social impact.</p>
+  </section>
 
-            <!-- Header -->
-            <header id="header">
-                <a href="#about" class="logo"><strong>Thanmaya Sri's</strong> Portfolio</a>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/ThanmayaSri" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </header>
-
-            <!-- Navigation Buttons -->
-            <div class="nav-buttons">
-                <a href="#about">About Me</a>
-                <a href="#resume">Resume</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-            <!-- About Me -->
-            <section id="about">
-                <div class="header-with-image">
-                    <div class="header-text">
-                        <h1>Hi, I’m Thanmaya Sri Sigireddi,<br /> a Data Scientist</h1>
-                        <p>Harnessing data to drive innovation and impact</p>
-                    </div>
-                    <div class="header-image">
-                        <img src="images/my_image.jpeg" alt="Thanmaya Sri" />
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>I’m a Data Science graduate student at SUNY Buffalo who thrives at the crossroads of data, design, and purpose. My work blends technical precision with creative thinking—building AI-powered systems, insightful models, and user-centric digital experiences. From decoding complex patterns to crafting intuitive solutions, I believe data is more than numbers—it’s a language for change, innovation, and human impact.</p>
-                </div>
-            </section>
-
-            <!-- Other sections (Resume, Experience, etc.) go here... -->
-
-        </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Detox Dial – AI-Powered Digital Wellness App</h3>
+      <p>Developed a multi-modal AI intervention system with GPT-based chat and behavioral analytics to reduce digital addiction. Designed cross-platform UI for enhanced user experience.</p>
     </div>
-</div>
+    <div class="project">
+      <h3>Relational Database for Laptop Specifications</h3>
+      <p>Built a PostgreSQL database for 5,000+ records with performance-optimized queries using CTEs, indexing, and ETL pipelines with Pandas & SQLAlchemy.</p>
+    </div>
+    <div class="project">
+      <h3>Cryptocurrency Price Clustering</h3>
+      <p>Used PCA and clustering algorithms in R to identify trends in crypto price movements. Created an interactive dashboard in Shiny for financial analysis.</p>
+    </div>
+  </section>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Python</div>
+      <div class="skill">R</div>
+      <div class="skill">SQL</div>
+      <div class="skill">TensorFlow</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Tableau</div>
+      <div class="skill">Spark</div>
+      <div class="skill">PostgreSQL</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Deep Learning</div>
+    </div>
+  </section>
 
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></p>
+    <p>Phone: <a href="tel:+17164659667">+1 (716)-465-9667</a></p>
+    <p><a class="btn" href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank">Visit LinkedIn</a></p>
+    <p><a class="btn" href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view" target="_blank">Download Resume</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Thanmaya Sri Sigireddi. Built with HTML & CSS.</p>
+  </footer>
 </body>
 </html>
