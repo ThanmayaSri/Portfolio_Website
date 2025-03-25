@@ -12,53 +12,78 @@
       font-family: 'Inter', sans-serif;
     }
     body {
-      background: #f9fafb; color: #111827; line-height: 1.6;
+      background: linear-gradient(to bottom, #f0f4f8, #e2e8f0); color: #1f2937; line-height: 1.6;
     }
     header {
-      background: #1f2937; color: white; padding: 2rem 1rem; text-align: center;
+      background: #1f2937; color: white; padding: 3rem 1rem; text-align: center;
+      animation: fadeInDown 1s ease-in-out;
     }
     header h1 {
-      font-size: 2.8rem; margin-bottom: 0.5rem;
+      font-size: 3rem; margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.2rem; color: #d1d5db;
+      font-size: 1.2rem; color: #cbd5e1;
+    }
+    .social-icons {
+      display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;
+    }
+    .social-icons a {
+      color: #38bdf8; font-size: 1.8rem; transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
     }
     nav {
-      display: flex; justify-content: center; gap: 2rem; padding: 1rem; background: #374151;
+      display: flex; justify-content: center; gap: 2rem; padding: 1rem; background: #2563eb;
+      position: sticky; top: 0; z-index: 1000;
     }
     nav a {
-      color: white; text-decoration: none; font-weight: 600;
+      color: white; text-decoration: none; font-weight: 600; transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e0f2fe;
     }
     section {
-      max-width: 1000px; margin: 2rem auto; padding: 0 1rem;
+      max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem;
+      animation: fadeInUp 1s ease-in-out;
     }
     section h2 {
-      font-size: 2rem; margin-bottom: 1rem; color: #1f2937;
+      font-size: 2rem; margin-bottom: 1rem; color: #0f172a;
       border-left: 6px solid #2563eb; padding-left: 1rem;
     }
     .project, .experience, .certification {
-      background: white; padding: 1rem; margin-bottom: 1.5rem; border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: white; padding: 1.2rem; margin-bottom: 1.5rem; border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .project:hover, .experience:hover, .certification:hover {
+      transform: translateY(-5px);
     }
     .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem;
     }
     .skill, .cert {
-      background: #e0f2fe; padding: 0.7rem; border-radius: 8px; text-align: center;
-      font-weight: 600;
-    }
-    .social-icons {
-      display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;
-    }
-    .social-icons a {
-      color: #2563eb; font-size: 1.5rem;
+      background: #e0f2fe; padding: 0.8rem; border-radius: 8px; text-align: center;
+      font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
     .btn {
-      display: inline-block; background: #2563eb; color: white; padding: 0.6rem 1rem;
-      border-radius: 8px; margin-top: 0.5rem; text-decoration: none; font-weight: 600;
+      display: inline-block; background: #2563eb; color: white; padding: 0.7rem 1.2rem;
+      border-radius: 8px; margin-top: 1rem; text-decoration: none; font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #1e40af;
     }
     footer {
-      text-align: center; padding: 2rem 1rem; background: #f3f4f6; color: #6b7280;
+      text-align: center; padding: 2rem 1rem; background: #cbd5e1; color: #334155;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
