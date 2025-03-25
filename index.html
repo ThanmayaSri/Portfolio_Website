@@ -3,90 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thanmaya Sri Sigireddi | Data Scientist</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Thanmaya Sri Sigireddi | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .contact {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .projects, .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      flex: 1 1 300px;
+    }
+
+    ul {
+      list-style: disc inside;
+    }
+
+    .skills-list span {
+      background-color: #2575fc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .projects, .skills-list {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <h1>Thanmaya Sri Sigireddi</h1>
-      <p>Data Scientist | Machine Learning Enthusiast | Big Data Analyst</p>
-      <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a> |
+    <h1>Thanmaya Sri Sigireddi</h1>
+    <p>Data Scientist | Machine Learning Enthusiast | Big Data Analyst</p>
+    <div class="contact">
+      <a href="mailto:sigireddithanmayasri@gmail.com">Email</a> |
       <a href="tel:+17164659667">+1 (716)-465-9667</a> |
       <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank">LinkedIn</a>
     </div>
   </header>
 
-  <section class="about">
-    <div class="container">
+  <div class="container">
+    <section>
       <h2>About Me</h2>
       <p>I am a passionate Data Scientist currently pursuing my Master's at SUNY Buffalo. With a strong foundation in machine learning, big data technologies, and data analysis, I love building AI-powered applications that create real-world impact.</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="section bg-alt">
-    <div class="container">
+    <section>
       <h2>Projects</h2>
-      <div class="card">
-        <h3>Detox Dial – AI-Powered Digital Wellness App</h3>
-        <p>Multi-modal AI intervention system using GPT-based chat and phone call simulation. Personalized detox recommendations with behavioral analytics and cross-platform design.</p>
+      <div class="projects">
+        <div class="card">
+          <h3>Detox Dial – AI-Powered Digital Wellness App</h3>
+          <p>Multi-modal AI intervention system using GPT chat and phone call simulation. Personalized detox recommendations with behavioral analytics and cross-platform design.</p>
+        </div>
+        <div class="card">
+          <h3>Relational Laptop Database</h3>
+          <p>BCNF-normalized PostgreSQL database with 5,000+ records. Advanced SQL, ETL pipelines using Pandas and SQLAlchemy for analytics.</p>
+        </div>
+        <div class="card">
+          <h3>Cryptocurrency Clustering</h3>
+          <p>Dimensionality reduction with PCA and clustering using K-Means & Hierarchical methods. Built a dashboard in R (Shiny) for crypto insights.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Relational Laptop Database</h3>
-        <p>BCNF-normalized PostgreSQL database with 5,000+ records. Advanced SQL, ETL pipelines using Pandas and SQLAlchemy for trend prediction and analytics.</p>
-      </div>
-      <div class="card">
-        <h3>Cryptocurrency Clustering</h3>
-        <p>Dimensionality reduction with PCA and clustering using K-Means & Hierarchical methods. Interactive dashboard in R (Shiny) for crypto insights.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
+    <section>
       <h2>Experience</h2>
       <div class="card">
         <h3>Data Analyst Intern – Perfect Job Accord</h3>
         <ul>
           <li>Optimized big data pipelines with Linux & Spark (+30% efficiency).</li>
           <li>Built ML models with Python, TensorFlow, PySpark.</li>
-          <li>Developed ETL workflows and interactive dashboards using Tableau and Power BI.</li>
+          <li>Developed ETL workflows and dashboards using Tableau and Power BI.</li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section bg-alt">
-    <div class="container">
+    <section>
       <h2>Skills</h2>
-      <ul class="skills">
-        <li>Python</li>
-        <li>R</li>
-        <li>SQL</li>
-        <li>TensorFlow</li>
-        <li>PySpark</li>
-        <li>Power BI</li>
-        <li>Tableau</li>
-        <li>PostgreSQL</li>
-        <li>Machine Learning</li>
-        <li>Big Data</li>
-        <li>Data Visualization</li>
-      </ul>
-    </div>
-  </section>
+      <div class="skills-list">
+        <span>Python</span>
+        <span>R</span>
+        <span>SQL</span>
+        <span>TensorFlow</span>
+        <span>PySpark</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>PostgreSQL</span>
+        <span>Machine Learning</span>
+        <span>Big Data</span>
+        <span>Data Visualization</span>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container">
+    <section>
       <h2>Education</h2>
       <p><strong>State University of New York at Buffalo</strong> — M.S. in Data Science (2024–2025)</p>
       <p><strong>VNR VJIET</strong> — B.Tech in Electrical & Electronics Engineering (2019–2023)</p>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2024 Thanmaya Sri Sigireddi. All rights reserved.</p>
-    </div>
+    <p>&copy; 2024 Thanmaya Sri Sigireddi</p>
   </footer>
+
 </body>
 </html>
