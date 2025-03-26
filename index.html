@@ -239,6 +239,24 @@
       display: block;
       color: #ff5e00;
       margin-top: 5px;
+      text-decoration: none;
+    }
+
+    .certs a:hover {
+      text-decoration: underline;
+    }
+
+    .skills-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid-3 ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
     }
 
     .contact form {
@@ -345,18 +363,42 @@
 </section>
 
 <section id="skills" class="skills">
-  <h2>Skills & Certifications</h2>
-  <ul>
-    <li>Programming & Scripting: Python, R, C, HTML, CSS</li>
-    <li>Big Data & Databases: PostgreSQL, MySQL, Google BigQuery, AWS S3, Snowflake</li>
-    <li>Frameworks/Libraries: Machine Learning, Deep Learning, NLP, Pandas, Numpy, TensorFlow, PySpark</li>
-    <li>Visualization & Tools: Tableau, Power BI, Excel, UI/UX Design</li>
-  </ul>
-  <div class="certs">
-    <h3>Certifications:</h3>
+  <h2 class="section-title">Skills</h2>
+  
+  <div class="skills-grid-3">
+    <ul>
+      <li>Python</li>
+      <li>R</li>
+      <li>C</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+
+    <ul>
+      <li>PostgreSQL</li>
+      <li>MySQL</li>
+      <li>Google BigQuery</li>
+      <li>AWS S3</li>
+      <li>Snowflake</li>
+    </ul>
+
+    <ul>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+      <li>TensorFlow</li>
+      <li>PySpark</li>
+      <li>Power BI</li>
+    </ul>
+  </div>
+</section>
+  
+<section id="certifications" class="certifications-section">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="cert-links">
     <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Intensive Data Science Internship - Plasmid</a>
-    <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI-integrated App - AI for Good Hackathon</a>
-    <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">SQL - Excel Solutions</a>
+    <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI Integrated App - AI for Good Hackathon</a>
+    <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">My SQL - Excel Solutions</a>
     <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a>
     <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a>
     <a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">Python - Excel Solutions</a>
