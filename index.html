@@ -112,13 +112,44 @@
       min-width: 300px;
     }
     
-    .resume-buttons a {
-      text-decoration: none;
-      margin-right: 20px;
-      background: #ff5e00;
-      color: white;
+    .resume-section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .resume-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+     .resume-text {
+       color: #777;
+       font-size: 1rem;
+       margin-bottom: 2rem;
+    }
+
+    .resume-button-wrapper {
+      margin-top: 1.5rem;
+    }
+
+    .download-btn {
+      display: inline-block;
       padding: 10px 20px;
-      border-radius: 8px;
+      border: 2px solid #ff5e00;
+      color: #ff5e00;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #ff5e00;
+      color: white;
+
     }
 
     .experience, .projects, .skills, .contact {
@@ -212,13 +243,22 @@
   </div>
 </section>
 
-<section id="resume" class="resume">
-  <h2>Resume</h2>
-  <div class="resume-buttons">
-    <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank">View Resume</a>
-    <a href="assets/resume/Thanmaya_Resume.pdf" download>Download Resume</a>
+<section id="resume" class="resume-section">
+  <header class="main">
+    <h1>My Resume</h1>
+  </header>
+
+  <p class="resume-text">You can view or download my resume below:</p>
+
+  <!-- Embedded PDF Viewer -->
+  <iframe src="assets/resume/Thanmaya_Resume.pdf" width="100%" height="600px"></iframe>
+
+  <!-- Download Button -->
+  <div class="resume-button-wrapper">
+    <a href="assets/resume/Thanmaya_Resume.pdf" class="download-btn" download>Download Resume</a>
   </div>
 </section>
+
 
 <section id="experience" class="experience">
   <h2>Professional Experience</h2>
