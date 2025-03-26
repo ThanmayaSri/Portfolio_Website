@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanmaya Sri Sigireddi | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -27,11 +27,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
+      flex-wrap: wrap;
     }
 
     header h1 {
       color: #ff5e00;
       font-weight: 800;
+      font-size: 1.2rem;
     }
 
     nav a {
@@ -41,10 +43,24 @@
       font-weight: 500;
     }
 
+    .nav-social-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
     .social-icons a {
       color: white;
-      margin-left: 15px;
       font-size: 1.2rem;
+    }
+
+    .social-icons a:hover {
+      color: #ff5e00;
     }
 
     section {
@@ -153,17 +169,19 @@
 
 <header>
   <h1>Thanmaya Sri's Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#resume">Resume</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+  <div class="nav-social-wrapper">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ThanmayaSri" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
   </div>
 </header>
 
