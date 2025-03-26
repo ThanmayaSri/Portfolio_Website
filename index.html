@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanmaya Sri Sigireddi | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7f6f7c8a6e.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * {
       margin: 0;
@@ -31,7 +30,6 @@
     }
 
     header h1 {
-      font-size: 1.5rem;
       color: #ff5e00;
       font-weight: 800;
     }
@@ -72,23 +70,82 @@
 
     .about {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
-      justify-content: center;
     }
 
     .about img {
-      width: 220px;
-      height: 220px;
+      width: 250px;
+      height: 250px;                                                                                                                                                             modify this code to reduce the size of Thanmaya Sri's portfolio, also I could not see linkedin and github icons to access my accounts on top, place my image beside about me text and make the allignment to end at same place in every line
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .about p {
-      text-align: justify;
-      line-height: 1.8;
+    .resume-buttons a {
+      text-decoration: none;
+      margin-right: 20px;
+      background: #ff5e00;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .experience, .projects, .skills, .contact {
+      margin-top: 2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .skills ul {
+      columns: 2;
+      margin-top: 1rem;
+    }
+
+    .certs a {
+      display: block;
+      color: #ff5e00;
+      margin-top: 5px;
+    }
+
+    .contact form {
+      margin-top: 1rem;
+      max-width: 400px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact button {
+      background: #ff5e00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -112,22 +169,17 @@
 
 <section class="hero">
   <h2>Thanmaya Sri Sigireddi</h2>
-  <p>Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact</p>
+  <p> Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact </p>
 </section>
 
 <section id="about" class="about">
   <img src="images/my_image.jpeg" alt="Thanmaya Photo" />
   <div>
     <h2>About Me</h2>
-    <p>
-      I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.
-    </p>
+    <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.
+</p>
   </div>
 </section>
-
-</body>
-</html>
-
 
 <section id="resume" class="resume">
   <h2>Resume</h2>
