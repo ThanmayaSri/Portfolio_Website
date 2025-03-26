@@ -77,7 +77,7 @@
 
     .about img {
       width: 250px;
-      height: 250px;                                                                                                                                                             modify this code to reduce the size of Thanmaya Sri's portfolio, also I could not see linkedin and github icons to access my accounts on top, place my image beside about me text and make the allignment to end at same place in every line
+      height: 250px;
       object-fit: cover;
       border-radius: 50%;
     }
@@ -163,21 +163,20 @@
   </nav>
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/ThanmayaSri" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
   </div>
 </header>
 
 <section class="hero">
   <h2>Thanmaya Sri Sigireddi</h2>
-  <p> Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact </p>
+  <p>Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact</p>
 </section>
 
 <section id="about" class="about">
   <img src="images/my_image.jpeg" alt="Thanmaya Photo" />
   <div>
     <h2>About Me</h2>
-    <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.
-</p>
+    <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
   </div>
 </section>
 
@@ -192,8 +191,8 @@
 <section id="experience" class="experience">
   <h2>Professional Experience</h2>
   <p><strong>Data Analyst Intern, Perfect Job Accord (Dec 2022 – Dec 2023)</strong></p>
-  <p><p>During this internship, I worked on data-driven job market analysis, utilizing SQL and Python (Pandas, NumPy) to analyze large datasets containing job trends, skills demand, and candidate profiling. I developed interactive Power BI dashboards to provide dynamic insights into hiring patterns and job postings. Additionally, I implemented predictive analytics models to enhance job recommendations based on historical hiring trends and user behavior data.</p>
-	<p>Another key aspect of my role was data cleaning and preprocessing, ensuring high data quality for accurate insights. I collaborated closely with the engineering and business teams to refine algorithms for automated resume screening, improving efficiency in talent acquisition pipelines. This role honed my data visualization, predictive modeling, and business intelligence skills while providing hands-on experience in the recruitment analytics domain.</p></p>
+ <p><p>During this internship, I worked on data-driven job market analysis, utilizing SQL and Python (Pandas, NumPy) to analyze large datasets containing job trends, skills demand, and candidate profiling. I developed interactive Power BI dashboards to provide dynamic insights into hiring patterns and job postings. Additionally, I implemented predictive analytics models to enhance job recommendations based on historical hiring trends and user behavior data.</p>
+ <p>Another key aspect of my role was data cleaning and preprocessing, ensuring high data quality for accurate insights. I collaborated closely with the engineering and business teams to refine algorithms for automated resume screening, improving efficiency in talent acquisition pipelines. This role honed my data visualization, predictive modeling, and business intelligence skills while providing hands-on experience in the recruitment analytics domain.</p></p>
 </section>
 
 <section id="projects" class="projects">
@@ -202,38 +201,37 @@
     <div class="project-card">
       <img src="images/DD.webp" alt="Detox Dial" />
       <h3>Detox Dial</h3>
-      <p>Detox Dial is an AI-driven digital wellness application designed to help users overcome digital addiction through personalized AI interventions, behavioral analytics, and reinforcement learning-based habit formation. Unlike traditional app blockers, Detox Dial dynamically analyzes user behavior, tracks screen time, and provides AI-powered interventions via chatbots and phone calls. The system leverages GPT-based conversational AI to engage users in meaningful interactions, adapting its tone based on Briggs personality assessment results. The backend is built using Flask/Django with a PostgreSQL database, ensuring efficient storage and retrieval of user engagement data. The React.js-based frontend delivers an interactive and intuitive experience, while AWS Lambda and Firebase provide cloud-based scalability and authentication. The system integrates machine learning models for predictive behavioral insights, allowing users to receive adaptive notifications that help in breaking addictive digital habits. This project highlights expertise in NLP, reinforcement learning, cloud computing, and AI-driven behavioral analytics.</p>
+      <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction.</p>
     </div>
     <div class="project-card">
       <img src="images/LD.jpg" alt="Laptop DB" />
       <h3>Design & Implementation of Relational Database for Laptop Specifications</h3>
-      <p>This project involves the design and implementation of a relational database system for managing and analyzing laptop specifications and customer reviews. The database is structured to support complex queries, data integrity constraints, and high-performance indexing for efficient retrieval. The schema adheres to Boyce-Codd Normal Form (BCNF), ensuring minimal redundancy while maintaining referential integrity between tables such as Laptop, Brand, Processor, RAM, GPU, and Storage. The ETL pipeline, built using Apache Airflow and Pandas, processes and transforms raw laptop data from CSV files into a structured format. Advanced SQL queries, stored procedures, and indexing techniques (B-Tree, Hash) optimize data retrieval speed, while window functions and Common Table Expressions (CTEs) enable analytical querying. The database is integrated with Power BI and Tableau for real-time visualization, helping manufacturers, retailers, and analysts extract insights on market trends, customer sentiment, and feature popularity. This project demonstrates proficiency in SQL optimization, database normalization, and data pipeline automation.</p>
+      <p>Designed a PostgreSQL DB of 5000+ records with advanced SQL techniques for efficient querying and analytics.</p>
     </div>
     <div class="project-card">
       <img src="images/CC.webp" alt="Crypto Clustering" />
       <h3>Clustering of Cryptocurrency Price Movements</h3>
-      <p>This project applies unsupervised learning techniques to analyze historical cryptocurrency price trends, segmenting assets into meaningful clusters for risk assessment and investment strategy development. The process begins with data acquisition and preprocessing, where historical price data from Kaggle datasets is cleaned and transformed using Python (Pandas, NumPy). Principal Component Analysis (PCA) is employed to reduce dimensionality while retaining the most significant variance in the data. K-Means Clustering is then used to categorize cryptocurrencies based on market behavior, with the Elbow Method determining the optimal number of clusters. Additionally, Hierarchical Clustering is implemented to reveal the hierarchical relationships between assets. The final output is visualized using Shiny dashboards and Plotly, enabling users to dynamically explore trends and market segmentation. This project is particularly useful for investors, financial analysts, and researchers looking to understand cryptocurrency volatility and develop optimized portfolio strategies. It showcases expertise in data science, clustering algorithms, dimensionality reduction, and interactive visualization.</p>
+      <p>Used PCA and clustering algorithms to analyze crypto price trends with interactive dashboards in R (Shiny).</p>
     </div>
   </div>
 </section>
 
 <section id="skills" class="skills">
-  <h2>Skills</h2>
+  <h2>Skills & Certifications</h2>
   <ul>
-    <li> Programming & Scripting: Python, R, C, HTML, CSS</li>
+    <li>Programming & Scripting: Python, R, C, HTML, CSS</li>
     <li>Big Data & Databases: PostgreSQL, MySQL, Google BigQuery, AWS S3, Snowflake</li>
     <li>Frameworks/Libraries: Machine Learning, Deep Learning, NLP, Pandas, Numpy, TensorFlow, PySpark</li>
     <li>Visualization & Tools: Tableau, Power BI, Excel, UI/UX Design</li>
   </ul>
   <div class="certs">
     <h3>Certifications:</h3>
-    <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Data Science Internship - Plasmid</a>
+    <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Intensive Data Science Internship - Plasmid</a>
     <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI-integrated App - AI for Good Hackathon</a>
     <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">SQL - Excel Solutions</a>
-    <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a>
     <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a>
+    <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a>
     <a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">Python - Excel Solutions</a>
-     
   </div>
 </section>
 
