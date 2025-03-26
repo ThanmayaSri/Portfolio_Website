@@ -188,6 +188,10 @@
       margin-top: 2rem;
     }
 
+    .experience p {
+      text-align: justify;
+    }
+
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -208,6 +212,23 @@
       object-fit: cover;
       border-radius: 8px;
     }
+
+    .view-project-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #ff5e00;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-project-btn:hover {
+      background-color: #e04d00;
+    }
+
 
     .skills ul {
       columns: 2;
@@ -292,7 +313,6 @@
   </div>
 </section>
 
-
 <section id="experience" class="experience">
   <h2>Professional Experience</h2>
   <p><strong>Data Analyst Intern, Perfect Job Accord (Dec 2022 – Dec 2023)</strong></p>
@@ -307,16 +327,19 @@
       <img src="images/DD.webp" alt="Detox Dial" />
       <h3>Detox Dial</h3>
       <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction.</p>
+      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/LD.jpg" alt="Laptop DB" />
       <h3>Design & Implementation of Relational Database for Laptop Specifications</h3>
       <p>Designed a PostgreSQL DB of 5000+ records with advanced SQL techniques for efficient querying and analytics.</p>
+      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/CC.webp" alt="Crypto Clustering" />
       <h3>Clustering of Cryptocurrency Price Movements</h3>
       <p>Used PCA and clustering algorithms to analyze crypto price trends with interactive dashboards in R (Shiny).</p>
+      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
   </div>
 </section>
