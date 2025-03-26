@@ -255,14 +255,13 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
       gap: 2rem;
       margin-top: 1rem;
-    }
-
-    .skills-grid ul {
       list-style-type: disc;
       padding-left: 1.5rem;
+      max-width: 900px;
     }
 
     .contact form {
@@ -350,19 +349,19 @@
     <div class="project-card">
       <img src="images/DD.webp" alt="Detox Dial" />
       <h3>Detox Dial</h3>
-      <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction.</p>
+      <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction. Integrated UI/UX design principles and built a user-centered intervention system with measurable outcomes.</p>
       <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/LD.jpg" alt="Laptop DB" />
       <h3>Design & Implementation of Relational Database for Laptop Specifications</h3>
-      <p>Designed a PostgreSQL DB of 5000+ records with advanced SQL techniques for efficient querying and analytics.</p>
+      <p>Designed a PostgreSQL database with advanced SQL techniques for efficient querying and analytics.</p>
       <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/CC.webp" alt="Crypto Clustering" />
       <h3>Clustering of Cryptocurrency Price Movements</h3>
-      <p>Used PCA and clustering algorithms to analyze crypto price trends with interactive dashboards in R (Shiny).</p>
+      <p>Implemented unsupervised learning using K-Means and time-series preprocessing to uncover crypto market segmentation. Utilized Matplotlib and Seaborn for comparative volatility visualization and pattern clustering validation.</p>
       <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
     </div>
   </div>
@@ -370,37 +369,23 @@
 
 <section id="skills" class="skills-section">
   <h2 class="section-title">Skills</h2>
-  
-  <div class="skills-grid">
-    <ul>
-      <li>Python</li>
-      <li>R</li>
-      <li>C</li>  
-    </ul>
-
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>PostgreSQL</li>
-
-    <ul>
-      <li>MySQL</li>
-      <li>Google BigQuery</li>
-      <li>AWS S3</li>
-    </ul>
-
-    <ul>
-      <li>Snowflake</li>
-      <li>Machine Learning</li>
-      <li>Deep Learning</li>
-    </ul>
-
-    <ul>
-      <li>TensorFlow</li>
-      <li>PySpark</li>
-      <li>Power BI</li>
-    </ul>
-  </div>
+  <ul class="skills-grid">
+    <li>Python</li>
+    <li>R</li>
+    <li>C</li>  
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>PostgreSQL</li>
+    <li>MySQL</li>
+    <li>Google BigQuery</li>
+    <li>AWS S3</li>
+    <li>Snowflake</li>
+    <li>Machine Learning</li>
+    <li>Deep Learning</li>
+    <li>TensorFlow</li>
+    <li>PySpark</li>
+    <li>Power BI</li>
+  </ul>
 </section>
   
 <section id="certifications" class="certifications-section">
