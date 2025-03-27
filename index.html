@@ -259,19 +259,56 @@
       font-weight: 500;
     }
 
+    .certs li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .certs li i {
+      color: #ff5e00;
+      font-size: 1rem;
+      min-width: 16px;
+    }
+
     .certs a:hover {
       text-decoration: underline;
     }
 
-    .skills-grid {
+    .skills-categories {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: auto;
-      gap: 0.5rem 2rem;
-      margin-top: 0.5rem;
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .skill-box {
+      background: #fff5ec;
+      border-left: 5px solid #ff5e00;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-box h3 {
+      margin-bottom: 0.5rem;
+      color: #ff5e00;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-box p {
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     .contact form {
@@ -294,6 +331,17 @@
       padding: 10px 20px;
       border-radius: 6px;
     }
+
+    .email-icon {
+      font-size: 1.5rem;
+      color: #ff5e00;
+      margin-bottom: 1rem;
+      display: inline-block;
+   }
+
+    .email-icon:hover {
+       color: #e04d00;
+   }
   </style> 
 </head>
 <body>
@@ -339,12 +387,10 @@
   <div class="resume-heading-wrapper">
     <h2>My Resume</h2>
   </div>
-  <!-- Embedded PDF Viewer -->
-  <iframe src="assets/resume/Thanmaya_Resume.pdf" width="100%" height="600px"></iframe>
-
-  <!-- Download Button -->
+  
   <div class="resume-button-wrapper">
-    <a href="assets/resume/Thanmaya_Resume.pdf" class="download-btn" download>Download Resume</a>
+    <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
+    <a href="assets/resume/Thanmaya_Resume.pdf" download class="download-btn">Download Resume</a>
   </div>
 </section>
 
@@ -362,65 +408,103 @@
       <img src="images/DD.webp" alt="Detox Dial" />
       <h3>Detox Dial</h3>
       <p>Developed a multi-modal AI system integrating GPT-chat, AI calls, and behavior analytics to tackle digital addiction. Integrated UI/UX design principles and built a user-centered intervention system with measurable outcomes. Leveraged data to enhance digital wellbeing.</p>
-      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
+      <a href="https://github.com/ThanmayaSri/Detox-Dial" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/LD.jpg" alt="Laptop DB" />
       <h3>Design & Implementation of Relational Database for Laptop Specifications</h3>
       <p>Designed and implemented a relational database system for 5,000+ laptops using PostgreSQL to enable efficient querying, filtering, and analysis of device specifications for data-driven insights.</p>
-      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
+      <a href="https://github.com/ThanmayaSri/Laptop_Database_Project" target="_blank" class="view-project-btn">View Project</a>
     </div>
     <div class="project-card">
       <img src="images/CC.webp" alt="Crypto Clustering" />
       <h3>Clustering of Cryptocurrency Price Movements</h3>
       <p>Implemented unsupervised learning using K-Means and time-series preprocessing to uncover crypto market segmentation. Utilized Matplotlib and Seaborn for comparative volatility visualization and pattern clustering validation.</p>
-      <a href="https://drive.google.com/your-detox-link" target="_blank" class="view-project-btn">View Project</a>
+      <a href="https://github.com/ThanmayaSri/cryptocurrency-clustering" target="_blank" class="view-project-btn">View Project</a>
     </div>
   </div>
 </section>
 
 <section id="skills" class="skills-section">
   <h2 class="section-title">Skills</h2>
-  <ul class="skills-grid">
-    <li>Python</li>
-    <li>R</li>
-    <li>C</li>  
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>PostgreSQL</li>
-    <li>MySQL</li>
-    <li>Google BigQuery</li>
-    <li>AWS S3</li>
-    <li>Snowflake</li>
-    <li>Machine Learning</li>
-    <li>Deep Learning</li>
-    <li>TensorFlow</li>
-    <li>PySpark</li>
-    <li>Power BI</li>
-  </ul>
+  <div class="skills-categories">
+
+    <div class="skill-box">
+      <h3><i class="fas fa-code"></i> Programming</h3>
+      <p>Python, R, C, HTML, CSS</p>
+    </div>
+
+    <div class="skill-box">
+      <h3><i class="fas fa-database"></i> Databases & Big Data</h3>
+      <p>PostgreSQL, MySQL, Google BigQuery, AWS S3, Snowflake</p>
+    </div>
+
+    <div class="skill-box">
+      <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+      <p>Machine Learning, Deep Learning, TensorFlow, PySpark</p>
+    </div>
+
+    <div class="skill-box">
+      <h3><i class="fas fa-chart-line"></i> Tools</h3>
+      <p>Power BI</p>
+    </div>
+
+  </div>
 </section>
+
   
 <section id="certifications" class="certifications-section">
   <h2 class="section-title">Certifications</h2>
 
   <div class="certs">
     <ul>
-      <li><a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">Intensive Data Science Internship - Plasmid</a></li>
-      <li><a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">AI Integrated App - AI for Good Hackathon</a></li>
-      <li><a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">My SQL - Excel Solutions</a></li>
+      <li>
+        <i class="fas fa-briefcase"></i>
+        <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">
+          Intensive Data Science Internship - Plasmid
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-robot"></i>
+        <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">
+          AI Integrated App - AI for Good Hackathon
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-database"></i>
+        <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">
+          My SQL - Excel Solutions
+        </a>
+      </li>
     </ul>
     <ul>
-      <li><a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">Data Science Foundations - Great Learning</a></li>
-      <li><a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">Microsoft Power BI - Excel Solutions</a></li>
-      <li><a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">Python - Excel Solutions</a></li>
+      <li>
+        <i class="fas fa-chart-line"></i>
+        <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">
+          Data Science Foundations - Great Learning
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-chart-pie"></i>
+        <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">
+          Microsoft Power BI - Excel Solutions
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-python"></i>
+        <a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">
+          Python - Excel Solutions
+        </a>
+      </li>
     </ul>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:sigireddithanmayasri@gmail.com">sigireddithanmayasri@gmail.com</a></p>
-  <p>Phone: <a href="tel:+17164659667">+1 (716) 465-9667</a></p>
+  <a href="mailto:sigireddithanmayasri@gmail.com" target="_blank" class="email-icon">
+    <i class="fas fa-envelope"></i>
+  </a>
 
   <form>
     <input type="text" placeholder="Your Name" required />
