@@ -64,7 +64,7 @@
     }
 
     section {
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem 0.5rem 1rem;
     }
 
      section h2 {
@@ -110,15 +110,25 @@
       color: #333333;
     }
 
-    .about {
+    .about-section {
       display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      flex-wrap: wrap:
+      padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: row-reverse; 
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      text-align: justify;
     }
 
     .about img {
@@ -127,15 +137,6 @@
       object-fit: cover;
       border-radius: 50%;
       flex-shrink: 0;
-    }
-
-    .about p {
-      text-align: justify;
-    }
-
-    .about div {
-      flex: 1;
-      min-width: 300px;
     }
     
     .resume-section {
@@ -307,11 +308,15 @@
   </p>
 </section>
 
-<section id="about" class="about">
-  <img src="images/my_image.jpeg" alt="Thanmaya" />
-  <div>
-    <h2>About Me</h2>
-    <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
+<section id="about" class="about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
+    </div>
+    <div class="about img">
+      <img src="images/my_image.jpeg" alt="Thanmaya" />
+    <div>
   </div>
 </section>
 
