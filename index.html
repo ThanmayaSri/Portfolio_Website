@@ -360,6 +360,17 @@
     .email-icon:hover {
        color: #e04d00;
    }
+
+    .page-section {
+      display: none;
+      padding: 2rem;
+      min-height: 100vh; 
+    }
+
+   .page-section.active {
+     display: block;
+   }
+
   </style> 
 </head>
 <body>
@@ -389,7 +400,7 @@
   </p>
 </section>
 
-<section class="about-section">
+<section class="page-section about-section">
   <div class="about-content">
     <div class="about-text">
       <h2>About Me</h2>
@@ -401,7 +412,7 @@
   </div>
 </section>
 
-<section id="resume" class="resume-section">
+<section id="resume" class="page-section resume-section">
   <div class="resume-heading-wrapper">
     <h2>My Resume</h2>
   </div>
@@ -411,14 +422,14 @@
   </div>
 </section>
 
-<section id="experience" class="experience">
+<section id="experience" class="page-section experience">
   <h2>Professional Experience</h2>
   <p><strong>Data Analyst Intern, Perfect Job Accord (Dec 2022 – Dec 2023)</strong></p>
  <p><p>During this internship, I worked on data-driven job market analysis, utilizing SQL and Python (Pandas, NumPy) to analyze large datasets containing job trends, skills demand, and candidate profiling. I developed interactive Power BI dashboards to provide dynamic insights into hiring patterns and job postings. Additionally, I implemented predictive analytics models to enhance job recommendations based on historical hiring trends and user behavior data.</p>
  <p>Another key aspect of my role was data cleaning and preprocessing, ensuring high data quality for accurate insights. I collaborated closely with the engineering and business teams to refine algorithms for automated resume screening, improving efficiency in talent acquisition pipelines. This role honed my data visualization, predictive modeling, and business intelligence skills while providing hands-on experience in the recruitment analytics domain.</p></p>
 </section>
 
-<section id="projects" class="projects">
+<section id="projects" class="page-section projects">
   <h2>Projects</h2>
   <div class="project-grid">
     <div class="project-card">
@@ -442,7 +453,7 @@
   </div>
 </section>
 
-<section id="skills" class="skills-section">
+<section id="skills" class="page-section skills-section">
   <h2 class="section-title">Skills</h2>
   <div class="skills-categories">
 
@@ -470,7 +481,7 @@
 </section>
 
   
-<section id="certifications" class="certifications-section">
+<section id="certifications" class="page-section certifications-section">
   <h2 class="section-title">Certifications</h2>
 
   <div class="certs">
@@ -517,7 +528,7 @@
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="page-section contact">
   <h2>Contact</h2>
 
   <p>
@@ -533,6 +544,32 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
+
+<script>
+// Show only the "about" section by default on page load
+document.querySelector("#about").classList.add("active");
+
+// Add click listeners to all nav links
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent default scroll behavior
+
+    // Get the section ID from the href (like #projects → projects)
+    const targetId = this.getAttribute("href").substring(1);
+
+    // Hide all sections
+    document.querySelectorAll(".page-section").forEach(section => {
+      section.classList.remove("active");
+    });
+
+    // Show the selected section
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
