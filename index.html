@@ -361,16 +361,6 @@
        color: #e04d00;
    }
 
-    .page-section {
-      display: none;
-      padding: 2rem;
-      min-height: 100vh; 
-    }
-
-   .page-section.active {
-     display: block;
-   }
-
   </style> 
 </head>
 <body>
@@ -544,33 +534,6 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Show only the "about" section by default on page load
-    document.querySelector("#about").classList.add("active");
-
-   // Add click listeners to all nav links
-   document.querySelectorAll("nav a").forEach(link => {
-  l  ink.addEventListener("click", function(e) {
-      e.preventDefault(); // Prevent default scroll behavior
-
-      // Get the section ID from the href (like #projects → projects)
-      const targetId = this.getAttribute("href").substring(1);
-
-      // Hide all sections
-      document.querySelectorAll(".page-section").forEach(section => {
-        section.classList.remove("active");
-      });
-
-      // Show the selected section
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add("active");
-      }
-    });
-  });
-</script>
-
+  
 </body>
 </html>
