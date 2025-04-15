@@ -546,29 +546,30 @@
 </section>
 
 <script>
-// Show only the "about" section by default on page load
-document.querySelector("#about").classList.add("active");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Show only the "about" section by default on page load
+    document.querySelector("#about").classList.add("active");
 
-// Add click listeners to all nav links
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault(); // Prevent default scroll behavior
+   // Add click listeners to all nav links
+   document.querySelectorAll("nav a").forEach(link => {
+  l  ink.addEventListener("click", function(e) {
+      e.preventDefault(); // Prevent default scroll behavior
 
-    // Get the section ID from the href (like #projects → projects)
-    const targetId = this.getAttribute("href").substring(1);
+      // Get the section ID from the href (like #projects → projects)
+      const targetId = this.getAttribute("href").substring(1);
 
-    // Hide all sections
-    document.querySelectorAll(".page-section").forEach(section => {
-      section.classList.remove("active");
+      // Hide all sections
+      document.querySelectorAll(".page-section").forEach(section => {
+        section.classList.remove("active");
+      });
+
+      // Show the selected section
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.classList.add("active");
+      }
     });
-
-    // Show the selected section
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.classList.add("active");
-    }
   });
-});
 </script>
 
 </body>
