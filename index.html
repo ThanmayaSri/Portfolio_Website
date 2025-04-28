@@ -21,11 +21,26 @@
       scroll-behavior: smooth;
     }
 
+    html, body {
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
     body {
       background: #ffffff;
       color: #000000;
     }
 
+    section {
+      padding: 1rem 2rem;
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
     header {
       background: #000000;
       color: white;
