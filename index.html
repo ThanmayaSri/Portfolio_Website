@@ -345,13 +345,6 @@
       background-color: #e04d00;
     }
 
-    .certs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 0.5rem;
-    }
-
     .certs ul {
       list-style: none;
       padding-left: 0;
@@ -529,8 +522,49 @@
     }
 
     .certifications-section {
-      background: #ffffff;
+      background: #fefaf6;
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      animation: fadeIn 1s ease;
     }  
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto 0;
+    }
+
+    .cert-card {
+      background: white;
+      padding: 1.5rem;
+      border-left: 5px solid #ff5e00;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .cert-card i {
+      color: #ff5e00;
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+
+    .cert-card a {
+      color: #ff5e00;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .cert-card a:hover {
+      text-decoration: underline;
+    }
 
     .contact {
       background: #fff5ec;
@@ -625,6 +659,7 @@
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="social-icons">
@@ -741,47 +776,43 @@
 <section id="certifications" class="page-section certifications-section">
   <h2 class="section-title">Certifications</h2>
 
-  <div class="certs">
-    <ul>
-      <li>
-        <i class="fas fa-briefcase"></i>
-        <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">
-          Intensive Data Science Internship - Plasmid
-        </a>
-      </li>
-      <li>
-        <i class="fas fa-robot"></i>
-        <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">
-          AI Integrated App - AI for Good Hackathon
-        </a>
-      </li>
-      <li>
-        <i class="fas fa-database"></i>
-        <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">
-          My SQL - Excel Solutions
-        </a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <i class="fas fa-chart-line"></i>
-        <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">
-          Data Science Foundations - Great Learning
-        </a>
-      </li>
-      <li>
-        <i class="fas fa-chart-pie"></i>
-        <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">
-          Microsoft Power BI - Excel Solutions
-        </a>
-      </li>
-      <li>
-        <i class="fas fa-python"></i>
-        <a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">
-          Python - Excel Solutions
-        </a>
-      </li>
-    </ul>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <i class="fas fa-briefcase"></i>
+      <a href="https://drive.google.com/file/d/1aOjVv8G3CzqKIHwce-zQHQPFjn-oRB-w/view?usp=sharing" target="_blank">
+        Intensive Data Science Internship - Plasmid
+      </a>
+    </div>
+    <div class="cert-card">
+      <i class="fas fa-robot"></i>
+      <a href="https://drive.google.com/file/d/1aMftiri6GLBern--2gDaRdtWJw-Vp6Gl/view?usp=sharing" target="_blank">
+        AI Integrated App - AI for Good Hackathon
+      </a>
+    </div>
+    <div class="cert-card">
+       <i class="fas fa-database"></i>
+       <a href="https://drive.google.com/file/d/1i54HRs9IDyLRG3yDVegZYSRKNBdAzJU8/view?usp=sharing" target="_blank">
+         My SQL - Excel Solutions
+      </a>
+    </div>
+    <div class="cert-card">
+      <i class="fas fa-chart-line"></i>
+      <a href="https://drive.google.com/file/d/1QfQL6xAVh015sSovGojpgu26nW5i3ICg/view?usp=sharing" target="_blank">
+        Data Science Foundations - Great Learning
+      </a>
+    </div>
+    <div class="cert-card">
+      <i class="fas fa-chart-pie"></i>
+      <a href="https://drive.google.com/file/d/1hmVYmAPoUmJkT_hI1DSsHLNGzakJE_3J/view?usp=sharing" target="_blank">
+        Microsoft Power BI - Excel Solutions
+      </a>
+    </div>
+    <div class="cert-card">
+      <i class="fas fa-python"></i>
+      <a href="https://drive.google.com/file/d/1htCa6wdGtucivfyBEBphhVdwVd_5iYSq/view?usp=sharing" target="_blank">
+        Python - Excel Solutions
+      </a>
+    </div>
   </div>
 </section>
 
