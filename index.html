@@ -113,6 +113,14 @@
       margin-top: 0;
     }
 
+    .scroll-fix::before {
+      content: "";
+      display: block;
+      height: 100px; /* adjust based on your header height */
+      margin-top: -100px;
+      visibility: hidden;
+   }
+
     .hero {
       background: linear-gradient(to bottom, #ffffff, #f2f2f2);
       background-size: 400% 400%;
@@ -791,7 +799,7 @@
   </div>
 </section>
   
-<section id="certifications" class="page-section certifications-section">
+<section id="certifications" class="page-section certifications-section scroll-fix">
   <h2 class="section-title">Certifications</h2>
 
   <div class="cert-list">
