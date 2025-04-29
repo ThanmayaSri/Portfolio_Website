@@ -110,9 +110,17 @@
     }
 
     .hero {
-      text-align: center;
       background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      text-align: center;
       padding: 4rem 2rem;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     .hero-title {
@@ -375,83 +383,121 @@
       color: #ff5e00;
       margin-bottom: 1rem;
       display: inline-block;
-   }
+    }
 
     .email-icon:hover {
        color: #e04d00;
-   }
+    }
 
     /* Section backgrounds */
     .hero {
       background: linear-gradient(to bottom right, #f2f2f2, #ffffff);
-   }
+    }
 
     .about-section {
       background: #ffffff;
-   }
+    }
 
     .resume-section {
       background: #f7f7f7;
-   }
+    }
 
     .experience {
       background: #ffffff;
-   }
+    }
 
     .projects {
       background: #fff5ec;
-   }
+    }
 
-.skills-section {
-  background: #f7f7f7;
-}
+    .skills-section {
+      background: #f7f7f7;
+    }
 
-.certifications-section {
-  background: #ffffff;
-}
+    .certifications-section {
+      background: #ffffff;
+    }  
 
-.contact {
-  background: #fff5ec;
-}
+    .contact {
+      background: #fff5ec;
+    }
 
-/* Section animation */
-section {
-  animation: fadeIn 1s ease;
-}
+     /* Section animation */
+    section {
+      animation: fadeIn 1s ease;
+    }
 
-/* FadeIn keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    /* FadeIn keyframes */
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+     }
+    }
 
-/* Project card hover effect */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+   /* Project card hover effect */
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
 
-/* Resume Buttons */
-.download-btn:hover {
-  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
-}
+    /* Resume Buttons */
+    .download-btn:hover {
+      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
+    }
 
-/* View Project Button hover */
-.view-project-btn:hover {
-  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
-}
+    /* View Project Button hover */
+    .view-project-btn:hover {
+      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
+    }
 
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #ff5e00;
+      animation: bounce 2s infinite;
+    }
 
+    .scroll-down a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+      }
+      40% {
+        transform: translateY(10px); 
+      }
+      60% {
+        transform: translateY(5px);
+      }
+    }
+
+    .view-work-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 12px 25px;
+      background: #ff5e00;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .view-work-btn:hover {
+      background: #e04d00;
+    }
   </style> 
 </head>
 <body>
@@ -479,6 +525,12 @@ section {
   <p class="hero-tagline">
     Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
   </p>
+  <div class="scroll-down">
+    <a href="#about">
+      <i class="fas fa-angle-down"></i>
+    </a>
+  </div>
+  <a href="#projects" class="view-work-btn">View My Work</a>
 </section>
 
 <section class="page-section about-section">
