@@ -168,6 +168,7 @@
       font-size: 1rem;
       color: #333;
       line-height: 1.8;
+      text-align: justify;
     }
 
     .about img {
@@ -190,10 +191,41 @@
     }
     
     .resume-section {
-      padding: 1rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      background: #f7f7f7;
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .resume-card {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       text-align: center;
+      max-width: 600px;
+      width: 100%;
+      animation: fadeInUp 1s ease;
+    }
+
+    .resume-card h2 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .resume-card h2 i {
+      color: #ff5e00;
+      margin-right: 10px;
+    }
+
+    .resume-subtext {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
     }
 
     .resume-heading-wrapper {
@@ -229,6 +261,17 @@
     .resume-button-wrapper a {
       margin: 0 10px;
       display: inline-block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .download-btn {
@@ -606,13 +649,14 @@
 </section>
 
 <section id="resume" class="page-section resume-section">
-  <div class="resume-heading-wrapper">
-    <h2>My Resume</h2>
-  </div>
-  <div class="resume-button-wrapper">
-    <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
-    <a href="assets/resume/Thanmaya_Resume.pdf" download class="download-btn">Download Resume</a>
-  </div>
+  <div class="resume-card">
+    <h2><i class="fas fa-file-alt"></i> My Resume</h2>
+    <p class="resume-subtext">Want to know more about my professional experience and education? Check out my resume below!</p>
+    <div class="resume-button-wrapper">
+      <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
+      <a href="assets/resume/Thanmaya_Resume.pdf" download class="download-btn">Download Resume</a>
+    </div>
+  </div> 
 </section>
 
 <section id="experience" class="page-section experience">
