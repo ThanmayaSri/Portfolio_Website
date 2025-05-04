@@ -132,23 +132,21 @@
     .hero-container {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       gap: 3rem;
       flex-wrap: wrap;
       max-width: 1200px;
       width: 100%;
-      text-align: center;
-      flex-direction: column;
     }
 
     .hero-image img {
-      width: 260px;
-      height: 260px;
+      width: 280px;
+      height: 280px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+      box-shadow: 0 0 25px rgba(255, 94, 0, 0.6);
       animation: pulseGlow 3s infinite ease-in-out;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
     .hero-image img:hover {
@@ -168,7 +166,13 @@
     }
 
     .hero-text {
-      min-width: 700px;
+      flex: 1;
+      max-width: 600px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     .hero-title {
@@ -182,21 +186,20 @@
       font-size: 1.2rem;
       color: #555;
       margin-bottom: 1.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
+      line-height: 1.6;
     }
 
     .scroll-down {
-     font-size: 2rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
       color: #ff5e00;
       animation: bounce 2s infinite;
-      text-decoration: none;
     }
+
+    .scroll-down a {
+      text-decoration: none;
+      color: inherit;
+   }
 
     .view-work-btn {
       padding: 12px 25px;
@@ -210,6 +213,18 @@
 
     .view-work-btn:hover {
       background: #e04d00;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+      }
+      40% {
+        transform: translateY(10px); 
+      }
+      60% {
+        transform: translateY(5px);
+      }
     }
       
     .hero h2 {
@@ -761,12 +776,12 @@
       <p class="hero-tagline">
         Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
       </p>
-      <div class="hero-actions">
-        <a href="#about" class="scroll-down">
+      <div class="scroll-down">
+        <a href="#about">
           <i class="fas fa-angle-down"></i>
         </a>
-        <a href="#about" class="view-work-btn">Get to know more about me</a>
       </div>
+      <a href="#about" class="view-work-btn">Get to know more about me</a>
     </div>
   </div>
 </section>
