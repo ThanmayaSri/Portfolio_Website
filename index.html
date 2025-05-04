@@ -114,10 +114,12 @@
     }
 
     .hero {
-      background: linear-gradient(to bottom, #ffffff, #f2f2f2);
-      background-size: 400% 400%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
       animation: gradientMove 15s ease infinite;
-      text-align: center;
+      min-height: 100vh;
       padding: 4rem 2rem;
     }
 
@@ -127,17 +129,50 @@
       100% {background-position: 0% 50%;}
     }
 
-    .hero-title {
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text .hero-title {
       font-size: 3rem;
       font-weight: 800;
       color: #000;
     }
 
-    .hero-tagline {
+    .hero-text .hero-tagline {
       font-size: 1.2rem;
       color: #555;
       margin-top: 1rem;
+      max-width: 600px;
     }
+
+    .scroll-down {
+      margin-top: 1.5rem;
+    }
+
+    .view-work-btn {
+      margin-top: 1.5rem;
+    }
+    
 
     .hero h2 {
       font-size: 3rem;
@@ -157,14 +192,8 @@
     }
 
     .about-content {
-      display: flex;
-      flex-direction: row-reverse; 
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto;
+      flex-direction: column; 
+      align-items: flex-start;
     }
 
     .about-text {
@@ -685,16 +714,23 @@
 </header>
 
 <section class="hero">
-  <h1 class="hero-title">Thanmaya Sri Sigireddi</h1>
-  <p class="hero-tagline">
-    Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
-  </p>
-  <div class="scroll-down">
-    <a href="#about">
-      <i class="fas fa-angle-down"></i>
-    </a>
+  <div class="hero-container">
+    <div class="hero-image">
+      <img src="images/my_image.jpeg" alt="Thanmaya" />
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-title">Thanmaya Sri Sigireddi</h1>
+      <p class="hero-tagline">
+        Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
+      </p>
+      <div class="scroll-down">
+        <a href="#about">
+          <i class="fas fa-angle-down"></i>
+        </a>
+      </div>
+      <a href="#projects" class="view-work-btn">View My Work</a>
+    </div>
   </div>
-  <a href="#projects" class="view-work-btn">View My Work</a>
 </section>
 
 <section id ="about" class="page-section about-section">
@@ -702,9 +738,6 @@
     <div class="about-text">
       <h2>About Me</h2>
     <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
-    </div>
-    <div class="about img">
-      <img src="images/my_image.jpeg" alt="Thanmaya" />
     </div>
   </div>
 </section>
