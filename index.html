@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- SEO Meta Tags -->
-  <title>Portfolio</title>
+  <title>Thanmaya Sri's Portfolio</title>
   <meta name="description" content="Portfolio of Thanmaya Sri Sigireddi - Data Scientist, ML Enthusiast, Big Data & AI Developer.">
   <meta name="keywords" content="Thanmaya Sri Sigireddi, Data Scientist, Portfolio, AI Developer, ML Enthusiast">
   <meta name="author" content="Thanmaya Sri Sigireddi">
@@ -132,48 +132,86 @@
     .hero-container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 3rem;
       flex-wrap: wrap;
       max-width: 1200px;
       width: 100%;
+      text-align: center;
+      flex-direction: column;
     }
 
     .hero-image img {
-      width: 300px;
-      height: 300px;
+      width: 260px;
+      height: 260px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+      animation: pulseGlow 3s infinite ease-in-out;
+      transition: transform 0.3s;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255, 94, 0, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+      }
     }
 
     .hero-text {
-      flex: 1;
-      min-width: 300px;
+      min-width: 700px;
     }
 
-    .hero-text .hero-title {
-      font-size: 3rem;
+    .hero-title {
+      font-size: 2.8rem;
       font-weight: 800;
       color: #000;
+      margin-bottom: 0.5rem;
     }
 
-    .hero-text .hero-tagline {
+    .hero-tagline {
       font-size: 1.2rem;
       color: #555;
-      margin-top: 1rem;
-      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
 
     .scroll-down {
-      margin-top: 1.5rem;
+     font-size: 2rem;
+      color: #ff5e00;
+      animation: bounce 2s infinite;
+      text-decoration: none;
     }
 
     .view-work-btn {
-      margin-top: 1.5rem;
+      padding: 12px 25px;
+      background: #ff5e00;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
-    
 
+    .view-work-btn:hover {
+      background: #e04d00;
+    }
+      
     .hero h2 {
       font-size: 3rem;
       color: #000000;
@@ -694,7 +732,7 @@
 <body>
 
 <header>
-  <h1>Thanmaya Sri's Portfolio</h1>
+  <h1>Portfolio</h1>
   <div class="nav-social-wrapper">
     <nav>
       <a href="#about">About</a>
@@ -723,12 +761,12 @@
       <p class="hero-tagline">
         Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
       </p>
-      <div class="scroll-down">
-        <a href="#about">
+      <div class="hero-actions">
+        <a href="#about" class="scroll-down">
           <i class="fas fa-angle-down"></i>
         </a>
+        <a href="#about" class="view-work-btn">Get to know more about me</a>
       </div>
-      <a href="#projects" class="view-work-btn">View My Work</a>
     </div>
   </div>
 </section>
