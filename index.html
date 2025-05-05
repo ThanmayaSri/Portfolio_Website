@@ -286,6 +286,13 @@
       }
     }
 
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem; 
+    }
+
     .intro-quote {
       background: linear-gradient(to right, #ff5e00, #ff7f2e);
       -webkit-background-clip: text;
@@ -820,7 +827,6 @@
   <div class="nav-social-wrapper">
     <nav>
       <a href="#about">About</a>
-      <a href="#resume">Resume</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -849,10 +855,12 @@
         <span id="typed"></span>
       </p>
       
-      <div class="scroll-down">
-        <a href="#about">
-          <i class="fas fa-angle-down"></i>
-        </a>
+      <div class="hero-cta">
+        <div class="scroll-down">
+          <a href="#about">
+            <i class="fas fa-angle-down"></i>
+          </a>
+        </div>
       </div>
       
       <a href="#about" class="view-work-btn">View My Profile</a>
@@ -864,20 +872,27 @@
   <div class="about-content">
     <div class="about-text">
       <h2>About Me</h2>
-    <p>I am an aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. Whether engineering intelligent pipelines, crafting predictive models, or designing AI-powered wellness apps, I approach every project with a problem-solving mindset and a user-first perspective. My goal is not just to analyze data, but to translate it into meaningful, human-centered solutions that drive transformation—be it in business, behavior, or beyond.</p>
+      <p>
+        I am a passionate and aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose.
+        With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact.
+        My work bridges the gap between technical depth and meaningful impact — whether it’s designing predictive models, automating data workflows, or crafting digital wellness solutions powered by AI.
+      </p>
+      <p>
+        My professional journey began in HR analytics, where I developed machine learning models to improve employee retention and built robust ETL pipelines using PySpark and SQL. I believe in creating human-centered tools — evident in projects like <strong>Detox Dial</strong>, an AI-powered wellness app.
+      </p>
+      <p>
+        With hands-on experience in <strong>Python, SQL, R, Tableau, Power BI</strong>, and <strong>cloud platforms like AWS</strong>, I thrive on challenges that blend data engineering, ML, and storytelling.
+      </p>
+
+      <div class="resume-card">
+        <h2><i class="fas fa-file-alt"></i> My Resume</h2>
+        <p class="resume-subtext">Want to know more about my professional experience and education? Check out my resume below!</p>
+        <div class="resume-button-wrapper">
+          <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
-
-<section id="resume" class="page-section resume-section">
-  <div class="resume-card">
-    <h2><i class="fas fa-file-alt"></i> My Resume</h2>
-    <p class="resume-subtext">Want to know more about my professional experience and education? Check out my resume below!</p>
-    <div class="resume-button-wrapper">
-      <a href="assets/resume/Thanmaya_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
-      <a href="assets/resume/Thanmaya_Resume.pdf" download class="download-btn">Download Resume</a>
-    </div>
-  </div> 
 </section>
 
 <section id="experience" class="page-section experience">
