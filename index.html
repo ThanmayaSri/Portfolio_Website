@@ -523,6 +523,25 @@
       border-radius: 6px;
     }
 
+    .download-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #ff5e00, #ff7f2e);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(255, 94, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      animation: pulseBtn 2s infinite;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(135deg, #e04d00, #ff7f2e);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 94, 0, 0.6);
+    }
+
     .email-icon {
       font-size: 1.5rem;
       color: #ff5e00;
@@ -548,7 +567,7 @@
     }
 
     .experience {
-      background: #fff5ec;
+      background: #ffffff;
       padding: 4rem 2rem;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.04);
       border-radius: 12px;
@@ -775,7 +794,7 @@
     <div class="hero-text">
       <h1 class="hero-title">Thanmaya Sri Sigireddi</h1>
 
-      <p class="intro-quote">“Turning data into insights, and insights into action.”</p>
+      <p class="intro-quote">"Turning data into insights, and insights into action."</p>
       
       <p class="hero-tagline">
         <span id="typed"></span>
