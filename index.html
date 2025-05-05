@@ -128,23 +128,19 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -100px;
-      left: -100px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, #ff5e00 0%, transparent 70%);
+      top: -200px;
+      left: -200px;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle at center, #ff5e00 0%, transparent 70%);
       opacity: 0.08;
       z-index: 0;
-      animation: float 12s ease-in-out infinite alternate;
+      animation: floatGlow 10s ease-in-out infinite alternate;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) scale(1);
-      }
-      100% {
-        transform: translateY(40px) scale(1.05);
-      }
+    @keyframes floatGlow {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(40px) scale(1.05); }
     }
 
     @keyframes gradientMove {
@@ -161,6 +157,22 @@
       max-width: 1200px;
       width: 100%;
       padding: 0 2rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #000;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInSlide 1.2s ease forwards;
+    }
+
+    @keyframes fadeInSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-image {
@@ -203,6 +215,8 @@
       flex-direction: column;
       justify-content: center;
       padding-left: 1rem;
+      align-items: center;
+      text-align: center;
     }
 
     .hero-title {
@@ -215,8 +229,10 @@
     .hero-tagline {
       font-size: 1.2rem;
       color: #555;
+      text-align: center;
+      width: 100%;
       margin-bottom: 1.5rem;
-      line-height: 1.6;
+      min-height: 1.4em
     }
 
     .scroll-down {
@@ -242,6 +258,14 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(255, 94, 0, 0.4);
       transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      animation: pulseBtn 2s infinite;
+      margin-top: 0;
+    }
+
+    @keyframes pulseBtn {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
     .view-work-btn:hover {
@@ -263,9 +287,12 @@
     }
 
     .intro-quote {
+      background: linear-gradient(to right, #ff5e00, #ff7f2e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-style: italic;
-      font-size: 1rem;
-      color: #888;
+      font-size: 1.1rem;
+      font-weight: 500;
       margin-bottom: 1rem;
     }
       
