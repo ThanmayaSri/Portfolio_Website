@@ -121,6 +121,30 @@
       animation: gradientMove 15s ease infinite;
       min-height: 100vh;
       padding: 4rem 2rem;
+      position: relative;           
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #ff5e00 0%, transparent 70%);
+      opacity: 0.08;
+      z-index: 0;
+      animation: float 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        transform: translateY(40px) scale(1.05);
+      }
     }
 
     @keyframes gradientMove {
@@ -151,10 +175,12 @@
       border-radius: 50%;
       box-shadow: 0 0 25px rgba(255, 94, 0, 0.6);
       animation: pulseGlow 3s infinite ease-in-out;
-      transition: transform 0.3s ease;
+      border: 6px solid transparent:
+      transition: border 0.3s, transform 0.3s; 
     }
 
     .hero-image img:hover {
+      border: 6px solid #ff5e00;
       transform: scale(1.05);
     }
 
@@ -194,7 +220,7 @@
     }
 
     .scroll-down {
-      margin-bottom: 1rem;
+      margin-bottom: 0.3rem;
       font-size: 2rem;
       color: #ff5e00;
       animation: bounce 2s infinite;
@@ -209,16 +235,19 @@
     .view-work-btn {
       align-self: center;
       padding: 12px 25px;
-      background: #ff5e00;
+      background: linear-gradient(135deg, #ff5e00, #ff7f2e);
       color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
-      transition: background 0.3s;
+      box-shadow: 0 4px 12px rgba(255, 94, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     }
 
     .view-work-btn:hover {
-      background: #e04d00;
+      background: linear-gradient(135deg, #e04d00, #ff7f2e);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 94, 0, 0.6);
     }
 
     @keyframes bounce {
@@ -231,6 +260,13 @@
       60% {
         transform: translateY(5px);
       }
+    }
+
+    .intro-quote {
+      font-style: italic;
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 1rem;
     }
       
     .hero h2 {
@@ -779,15 +815,20 @@
     </div>
     <div class="hero-text">
       <h1 class="hero-title">Thanmaya Sri Sigireddi</h1>
+
+      <p class="intro-quote">“Turning data into insights, and insights into action.”</p>
+      
       <p class="hero-tagline">
-        Data Scientist | ML Enthusiast | Big Data & AI Developer | Harnessing data to drive innovation and impact
+        <span id="typed"></span>
       </p>
+      
       <div class="scroll-down">
         <a href="#about">
           <i class="fas fa-angle-down"></i>
         </a>
       </div>
-      <a href="#about" class="view-work-btn">Get to know more about me</a>
+      
+      <a href="#about" class="view-work-btn">View My Profile</a>
     </div>
   </div>
 </section>
@@ -941,6 +982,20 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed("#typed", {
+      strings: [
+        "Data Scientist.",
+        "ML Enthusiast.",
+        "Big Data & AI Developer.",
+        "Building Human-Centered Solutions."
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>  
 </body>
 </html>
