@@ -502,26 +502,56 @@
       line-height: 1.4;
     }
 
-    .contact form {
-      margin-top: 0.5rem;
-      max-width: 400px;
+    .contact {
+      background: #fff5ec;
+      text-align: center;
     }
 
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .contact-container {
+      max-width: 600px;
+      margin: 2rem auto;
     }
 
-    .contact button {
+    .contact-text {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
       background: #ff5e00;
       color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .contact-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.3);
+    }
+
+    .linkedin-btn {
+      background: #0077b5;
+    }
+
+    .linkedin-btn:hover {
+      box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+    }
+
 
     .download-btn {
       display: inline-block;
@@ -794,7 +824,7 @@
     <div class="hero-text">
       <h1 class="hero-title">Thanmaya Sri Sigireddi</h1>
 
-      <p class="intro-quote">'Turning data into insights, and insights into action'</p>
+      <p class="intro-quote">Turning data into insights, and insights into action</p>
       
       <p class="hero-tagline">
         <span id="typed"></span>
@@ -818,20 +848,26 @@
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        I am a passionate and aspiring Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. My work bridges the gap between technical depth and meaningful impact — whether it’s designing predictive models, automating data workflows, or crafting digital wellness solutions powered by AI.
+        I build systems that turn raw data into decisions...
       </p>
       <p>
-        My professional journey began in HR analytics, where I developed machine learning models to improve employee retention and built robust ETL pipelines using PySpark and SQL. I believe in creating human-centered tools — evident in projects like Detox Dial, an AI-powered wellness app.
+        I am a driven Master’s student in Data Science at the State University of New York at Buffalo, driven by curiosity and creativity and blending technical expertise with a deep sense of purpose. With a foundation in machine learning, big data systems, and AI-driven product development, I thrive at the intersection of innovation and impact. My work bridges the gap between technical depth and meaningful impact whether it’s designing predictive models, automating data workflows, or crafting digital wellness solutions powered by AI.
       </p>
       <p>
-        With hands-on experience in <strong>Python, SQL, R, Tableau, Power BI</strong>, and <strong>cloud platforms like AWS</strong>, I thrive on challenges that blend data engineering, ML, and storytelling.
+        My professional journey began as a Data Analyst at Nucleus Business Solutions, where I engineered end-to-end ETL pipelines from SQL Server to Snowflake, developed clustering models for user segmentation, conducted A/B testing to improve engagement, and built Power BI dashboards adopted across multiple teams. I consistently prioritize automation, optimization, and real-time analytics to drive efficiency and growth.
+      </p>
+      <p>
+        With hands-on experience in <strong>Python, SQL, R, AWS, Snowflake, Power BI</strong>, and <strong>Tableau</strong>, I thrive on solving challenges that blend data engineering, ML, and storytelling.
+      </p>
+      <p>
+        I don’t just analyze data - I engineer it, model it, and shape it into stories that drive action.
       </p>
 
       <div class="resume-card">
         <h3><i class="fas fa-file-alt"></i> My Resume</h3>
         <p class="resume-subtext">Want to know more about my professional experience and education? Check out my resume below!</p>
         <div class="resume-button-wrapper">
-          <a href="assets/Thanmaya_Sri_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
+          <a href="assets/Thanmaya_Sri_Sigireddi_Resume.pdf" target="_blank" class="download-btn">View Resume</a>
         </div>
       </div>
     </div>
@@ -841,10 +877,10 @@
 <section id="experience" class="page-section experience">
   <h2>Professional Experience</h2>
   <p><strong>Data Analyst, Nucleus Business Solutions (May 2023 – Dec 2023)</strong></p>
-  <p>Led development of machine learning pipelines using Scikit-learn to predict employee attrition and workforce demand, boosting HR forecasting accuracy by 20%. Built scalable ETL pipelines in PySpark and SQL to automate ingestion and aggregation of structured HR data (ATS, payroll, reviews). Developed Power BI and Tableau dashboards to track turnover trends, satisfaction, and recruiting funnel metrics in real-time. Collaborated with HR, engineering, and leadership to translate insights into actionable workforce strategies.</p>
+  <p>Engineered and automated end-to-end ETL pipelines from SQL Server to Snowflake to enable real-time analytics and reduce manual reporting efforts. Developed a K-Means clustering model to segment users based on behavioral patterns and improve campaign targeting effectiveness. Conducted A/B testing on recommendation logic to enhance engagement and customer retention. Built advanced Power BI dashboards with DAX, drill-through capabilities, and dynamic filters to support KPI tracking across teams. Strengthened data security by configuring AWS IAM and Snowflake RBAC for controlled and compliant data access.</p>
 
   <p><strong>Data Analyst Intern, Nucleus Business Solutions (Oct 2022 – Apr 2023)</strong></p>
-  <p>Conducted deep-dive analysis of hiring and retention data using Python (Pandas, NumPy) and SQL to uncover trends in candidate conversion and early-stage attrition. Designed interactive dashboards in Power BI to visualize source-of-hire effectiveness, pipeline velocity, and cost-per-hire metrics. Supported predictive modeling efforts by performing data cleaning, feature engineering, and exploratory data analysis (EDA). Delivered insights that shaped sourcing allocation strategies and improved stakeholder reporting clarity.</p>
+  <p>Scraped and integrated competitor pricing data using Python and combined it with internal business data to support pricing optimization strategies. Assisted in dashboard development and reporting automation by building structured data models and streamlining Excel workflows using VBA. Performed exploratory data analysis and data preparation to improve reporting accuracy and provide clearer visibility into business performance metrics.</p>
 </section>
 
 <section id="projects" class="page-section projects">
@@ -944,14 +980,26 @@
 </section>
 
 <section id="contact" class="page-section contact">
-  <h2>Contact</h2>
+  <h2>Let’s Connect</h2>
 
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-container">
+    <p class="contact-text">
+      Want to collaborate, discuss opportunities, or just say hello?
+      Reach out directly via email or connect with me on LinkedIn.
+    </p>
+
+    <div class="contact-buttons">
+      <a href="mailto:sigireddithanmayasri@gmail.com" class="contact-btn">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/thanmaya-sri-sigireddi"
+         target="_blank"
+         class="contact-btn linkedin-btn">
+        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+      </a>
+    </div>
+  </div>
 </section>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -970,4 +1018,5 @@
   </script>  
 </body>
 </html>
+
 
