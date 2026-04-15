@@ -106,10 +106,13 @@
     }
 
     .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
       animation: gradientMove 15s ease infinite;
       min-height: 100vh;
-      padding: 4rem 2rem;
+      padding: 6rem 2rem 2rem 2rem;
     }
 
     .hero::before {
@@ -144,6 +147,7 @@
       max-width: 1200px;
       width: 100%;
       padding: 0 2rem;
+      margin-top: 2rem;
     }
 
     .hero-title {
@@ -315,6 +319,19 @@
       line-height: 1.8;
       text-align: justify;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-text p {
+      width: 100%;
+      text-align: justify;
+    }
+
+    .about-text h2 {
+      width: 100%;
+      text-align: left;
     }
 
     @keyframes fadeInUp {
@@ -607,12 +624,13 @@
 
     .experience {
       background: #ffffff;
-      padding: 2rem 2rem;
+      padding: 2rem 2rem 3rem 2rem;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.04);
       border-radius: 0;
       max-width: 100%;
       margin: 0;
       animation: fadeInUp 1s ease;
+      border-bottom: 2px solid #f0f0f0;
     }
 
    /* Section heading */
@@ -638,6 +656,8 @@
     
     .projects {
       background: #fff5ec;
+      padding: 2rem 2rem 3rem 2rem;
+      border-bottom: 2px solid #ffe0c8;
     }
 
     .skills-section {
@@ -709,6 +729,8 @@
 
      /* Section animation */
     section {
+      padding: 2rem 2rem;
+      scroll-margin-top: 70px;
       animation: fadeIn 1s ease;
     }
 
