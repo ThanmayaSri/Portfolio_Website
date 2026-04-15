@@ -24,6 +24,7 @@
     html, body {
       height: 100%;
       overflow-y: auto;
+      scroll-snap-type: y mandatory;
     }
 
     body {
@@ -33,12 +34,17 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 70px; 
+      scroll-padding-top: 0; 
     }
     
     section {
-      padding: 2rem 2rem;
-      scroll-margin-top: 70px;
+      min-height: 100vh;
+      padding: 5rem 2rem 2rem 2rem;
+      scroll-snap-align: start;
+      scroll-margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       animation: fadeIn 1s ease;
     }
  
@@ -107,13 +113,14 @@
     }
 
     .hero {
+      scroll-snap-align: start;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
       animation: gradientMove 15s ease infinite;
       min-height: 100vh;
-      padding: 6rem 2rem 2rem 2rem;
+      padding: 5rem 2rem 2rem 2rem;
     }
 
     .hero::before {
@@ -613,13 +620,14 @@
        color: #e04d00;
     }
 
-    /* Section backgrounds */
-    .hero {
-      background: linear-gradient(to bottom right, #f2f2f2, #ffffff);
-    }
-
     .about-section {
+      min-height: 100vh;
+      scroll-snap-align: start;
       background: #ffffff;
+      padding: 5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .resume-section {
@@ -627,15 +635,19 @@
     }
 
     .experience {
+      min-height: 100vh;
+      scroll-snap-align: start;
       background: #ffffff;
-      padding: 2rem 2rem 3rem 2rem;
+      padding: 5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.04);
       border-radius: 0;
       max-width: 100%;
       margin: 0;
       animation: fadeInUp 1s ease;
       border-bottom: 2px solid #f0f0f0;
-      scroll-margin-top: 70px;
     }
 
    /* Section heading */
@@ -660,16 +672,21 @@
     }
     
     .projects {
-      scroll-margin-top: 70px;
+      min-height: 100vh;
+      scroll-snap-align: start;
       background: #fff5ec;
-      padding: 2rem 2rem 3rem 2rem;
+      padding: 5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       border-bottom: 2px solid #ffe0c8;
     }
 
     .skills-section {
       background: linear-gradient(135deg, #fff5ec, #ffffff);
-      min-height: auto;
-      padding: 2rem 2rem 3rem 2rem;
+      scroll-snap-align: start;
+      min-height: 100vh;
+      padding: 5rem 2rem 2rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -678,14 +695,15 @@
     }
 
     .certifications-section {
+      min-height: 100vh;
+      scroll-snap-align: start;
       background: #fff;
-      padding: 2rem 2rem 3rem 2rem;
-      min-height: auto;
+      padding: 5rem 2rem 2rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 2px solid #f0f0f0;
-      scroll-margin-top: 70px;
+      justify-content: center;
+      border-bottom: 2px solid #f0f0f0;  
     }  
 
     .cert-grid {
@@ -731,16 +749,14 @@
     }
     
     .contact {
+      min-height: 100vh;
+      scroll-snap-align: start;
       background: #fff5ec;
-      padding: 2rem 2rem;
-      min-height: auto;
-    }
-
-     /* Section animation */
-    section {
-      padding: 2rem 2rem;
-      scroll-margin-top: 70px;
-      animation: fadeIn 1s ease;
+      padding: 5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     /* FadeIn keyframes */
