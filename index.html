@@ -39,6 +39,7 @@
     section {
       padding: 2rem 2rem;
       scroll-margin-top: 70px;
+      animation: fadeIn 1s ease;
     }
  
    header {
@@ -530,7 +531,10 @@
 
     .contact {
       background: #fff5ec;
+      padding: 2rem 2rem 3rem 2rem;
+      min-height: auto;
       text-align: center;
+      scroll-margin-top: 70px;
     }
 
     .contact-container {
@@ -631,6 +635,7 @@
       margin: 0;
       animation: fadeInUp 1s ease;
       border-bottom: 2px solid #f0f0f0;
+      scroll-margin-top: 70px;
     }
 
    /* Section heading */
@@ -655,6 +660,7 @@
     }
     
     .projects {
+      scroll-margin-top: 70px;
       background: #fff5ec;
       padding: 2rem 2rem 3rem 2rem;
       border-bottom: 2px solid #ffe0c8;
@@ -663,20 +669,23 @@
     .skills-section {
       background: linear-gradient(135deg, #fff5ec, #ffffff);
       min-height: auto;
-      padding: 2rem 2rem;
+      padding: 2rem 2rem 3rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      border-bottom: 2px solid #ffe0c8;
     }
 
     .certifications-section {
       background: #fff;
-      padding: 2rem 2rem;
+      padding: 2rem 2rem 3rem 2rem;
       min-height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
+      border-bottom: 2px solid #f0f0f0;
+      scroll-margin-top: 70px;
     }  
 
     .cert-grid {
@@ -814,7 +823,7 @@
 <body>
 
 <header>
-  <h1>Portfolio</h1>
+  <h1>Thanmaya's Portfolio</h1>
   <div class="nav-social-wrapper">
     <nav>
       <a href="#about">About</a>
@@ -892,10 +901,10 @@
 
 <section id="experience" class="page-section experience">
   <h2>Professional Experience</h2>
-  <p><strong>Data Analyst, KunoSolTech LLC (Oct 2025 – Present)</strong></p>
+  <p><strong style="color: #ff5e00; font-size: 1.05rem; display: block; margin-top: 1rem;">Data Analyst, KunoSolTech LLC (Oct 2025 – Present)</strong></p>
   <p>Analyzed structured and semi-structured records across multiple business systems using Python and SQL in Snowflake, uncovering cross-functional trends that influenced revenue and operational planning decisions. Designed role-specific interactive dashboards improving leadership reporting efficiency and eliminating manual Excel reporting. Engineered reusable data models with embedded quality validation, enabling consistent and audit-ready reporting for compliance and business reviews. Automated incremental data refresh using Snowflake Streams and Tasks to minimize data availability lag for time-sensitive dashboards. Optimized query performance through QUERY_HISTORY profiling and execution plan analysis to improve analyst productivity. Collaborated with product, finance, and operations stakeholders to define KPIs, map data requirements, and deliver tailored visualizations that reduced ad-hoc reporting turnaround time.</p>
 
-  <p><strong>Data Analyst, Nucleus Business Solutions (Oct 2022 – Dec 2023)</strong></p>
+  <p><strong style="color: #ff5e00; font-size: 1.05rem; display: block; margin-top: 1rem;">Data Analyst, Nucleus Business Solutions (Oct 2022 – Dec 2023)</strong></p>
   <p>Engineered and automated end-to-end ETL pipelines from SQL Server to Snowflake, reducing manual processing and enabling real-time analytics for multiple stakeholders. Built a K-Means clustering model to segment users by browsing patterns, improving marketing targeting accuracy and user engagement. Scraped competitor pricing data using Python and integrated it with internal SKU and margin data to support pricing optimization strategies. Deployed Power BI dashboards with advanced DAX, drill-throughs, and custom filters adopted across multiple teams for real-time KPI tracking. Conducted A/B testing on recommendation logic to improve click-through rates and customer retention metrics. Configured AWS IAM and Snowflake RBAC for secure and compliant data access, and streamlined recurring report generation using Excel VBA macros.</p>
 </section>
 
